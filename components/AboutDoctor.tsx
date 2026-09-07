@@ -29,43 +29,43 @@ export default function AboutDoctor() {
   ];
 
   return (
-    <section id="sobre" className="py-24 sm:py-32 bg-brand-navy relative overflow-hidden">
+    <section id="sobre" className="py-24 sm:py-32 bg-brand-black relative overflow-hidden">
       {/* Subtle Background Elements */}
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-beige/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Doctor Photo Frame */}
           <div className="lg:col-span-5 relative">
-            <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-gold p-2 shadow-2xl">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-dark p-2 shadow-2xl border border-brand-beige/25">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-black-surface">
                 <Image
                   src="/dr_pedro_about.jpg"
                   alt="Dr. Pedro Henrique Ladeia Cruz no consultório"
                   fill
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent" />
                 
                 {/* Embedded Quote */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="font-serif italic text-white/90 text-sm sm:text-base leading-snug mb-2">
                     “A visão é o sentido mais precioso do ser humano. Cuidar dela exige rigor científico inegociável e sensibilidade médica profunda.”
                   </p>
-                  <p className="text-[11px] font-sans uppercase tracking-widest text-brand-gold font-semibold">
+                  <p className="text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
                     — Dr. Pedro Henrique Ladeia Cruz
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Decorative Gold Accent Frame */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-brand-gold/40 rounded-br-3xl pointer-events-none -z-10" />
+            {/* Decorative Beige Accent Frame */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
           </div>
 
           {/* Right Column: Editorial Narrative & Authority */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-gold uppercase mb-3">
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
               <span>✦ TRAJETÓRIA MÉDICA & AUTORIDADE</span>
             </div>
 
@@ -82,7 +82,7 @@ export default function AboutDoctor() {
                 pacientes e pela segurança consistente em procedimentos de alta complexidade.
               </p>
               <p>
-                Sua atuação clínica e cirúrgica é fundamentada no domínio aprofundado em <strong className="text-brand-gold font-medium">Córnea, Catarata e Ceratocone</strong>. 
+                Sua atuação clínica e cirúrgica é fundamentada no domínio aprofundado em <strong className="text-brand-beige font-medium">Córnea, Catarata e Ceratocone</strong>. 
                 Com o objetivo de oferecer um atendimento ainda mais exclusivo e sofisticado, expande sua 
                 presença para <strong className="text-white font-medium">Nova Lima</strong>, trazendo aos pacientes 
                 da região um modelo de consulta privativa, com tempo dedicado, diagnóstico computadorizado 
@@ -97,9 +97,9 @@ export default function AboutDoctor() {
                 return (
                   <div
                     key={idx}
-                    className="glass-panel p-4 rounded-2xl border border-white/5 flex items-start gap-3.5 hover:border-brand-gold/30 transition-colors"
+                    className="glass-panel-dark p-4 rounded-2xl border border-white/5 flex items-start gap-3.5 hover:border-brand-beige/30 transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-xl bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mt-0.5">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
@@ -116,8 +116,8 @@ export default function AboutDoctor() {
             </div>
 
             {/* Commitment Highlight */}
-            <div className="w-full glass-panel-gold p-4 rounded-2xl border border-brand-gold/30 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+            <div className="w-full glass-panel-dark p-4 rounded-2xl border border-brand-beige/30 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0">
                 <CheckCircle className="w-5 h-5" />
               </div>
               <p className="text-xs sm:text-sm text-brand-offwhite/90 font-light">

@@ -18,34 +18,33 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          navy: {
-            DEFAULT: '#060D19',
-            deep: '#030810',
-            light: '#0B172B',
-            card: '#0E1E38',
-            border: 'rgba(255, 255, 255, 0.08)',
+          black: {
+            DEFAULT: '#0A0A0A',
+            deep: '#050505',
+            surface: '#121212',
+            card: '#181818',
+            border: 'rgba(255, 255, 255, 0.1)',
           },
-          gold: {
-            DEFAULT: '#C5A880',
-            light: '#E5D3B3',
-            dark: '#9E8055',
-            glow: 'rgba(197, 168, 128, 0.25)',
+          beige: {
+            DEFAULT: '#D8CBB7',
+            light: '#F7F4EE',
+            sand: '#EDE8DF',
+            muted: '#C4B59D',
+            dark: '#8C7A60',
+            card: '#EFECE4',
           },
-          cyan: {
-            DEFAULT: '#38BDF8',
-            glow: 'rgba(56, 189, 248, 0.2)',
+          charcoal: {
+            DEFAULT: '#222220',
+            light: '#333330',
+            dark: '#161615',
           },
-          offwhite: '#F8FAFC',
-          muted: '#94A3B8',
+          offwhite: '#FDFBF7',
+          muted: '#8E8B82',
         },
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],
         sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-      },
-      backgroundImage: {
-        'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
-        'gold-shimmer': 'linear-gradient(135deg, #C5A880 0%, #F5E9D6 50%, #C5A880 100%)',
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -54,7 +53,7 @@ module.exports = {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-8px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
       },
     },

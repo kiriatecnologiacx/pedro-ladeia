@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar() {
     { name: 'Sobre o Médico', href: '#sobre' },
     { name: 'Especialidades', href: '#especialidades' },
     { name: 'Cirurgias Premium', href: '#cirurgias' },
-    { name: 'Protocolo Cirúrgico', href: '#protocolo' },
+    { name: 'Protocolo', href: '#protocolo' },
     { name: 'Unidades', href: '#unidades' },
     { name: 'FAQ', href: '#faq' },
   ];
@@ -31,51 +32,48 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-nav py-3.5 shadow-2xl shadow-black/40'
+          ? 'glass-nav py-3.5 shadow-xl shadow-black/60'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex flex-col group">
+        <a href="#" className="flex flex-col group shrink-0">
           <div className="flex items-center gap-2">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-brand-gold transition-colors">
+            <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-brand-beige transition-colors">
               DR. PEDRO LADEIA
             </span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
           </div>
-          <span className="text-[10px] sm:text-[11px] font-sans tracking-[0.25em] text-brand-gold uppercase font-medium">
+          <span className="text-[10px] sm:text-[11px] font-sans tracking-[0.22em] text-brand-beige uppercase font-medium">
             Alta Oftalmologia · Córnea & Catarata
           </span>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-[13px] tracking-wide text-brand-offwhite/75 hover:text-white transition-colors hover:translate-y-[-1px] duration-150"
+              className="text-[13px] tracking-wide text-brand-offwhite/70 hover:text-white transition-colors"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        {/* Header Right Actions */}
-        <div className="hidden sm:flex items-center gap-4">
-          <div className="hidden xl:flex items-center gap-1.5 text-[11px] tracking-wider text-brand-offwhite/50 uppercase">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" />
-            <span>15+ Anos de Excelência</span>
-          </div>
+        {/* Header Right Action (Single line CTA) */}
+        <div className="hidden sm:flex items-center">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-navy bg-gradient-to-r from-brand-gold-light via-brand-gold to-brand-gold-dark hover:brightness-110 shadow-lg shadow-brand-gold/15 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-black bg-brand-beige hover:bg-brand-beige-light transition-all duration-200 whitespace-nowrap shadow-sm"
           >
-            <span>Agendar Consulta</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <WhatsAppIcon className="w-3.5 h-3.5 text-brand-black" />
+            <span className="whitespace-nowrap">Agendar Consulta</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-brand-black" />
           </a>
         </div>
 
@@ -91,13 +89,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-panel border-t border-white/10 px-6 py-6 mt-3 space-y-4 animate-fadeIn">
+        <div className="lg:hidden glass-panel-dark border-t border-white/10 px-6 py-6 mt-3 space-y-4 animate-fadeIn">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm tracking-wide text-brand-offwhite/85 hover:text-brand-gold py-1.5 border-b border-white/5"
+              className="block text-sm tracking-wide text-brand-offwhite/85 hover:text-brand-beige py-1.5 border-b border-white/5"
             >
               {link.name}
             </a>
@@ -107,9 +105,10 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider text-brand-navy bg-brand-gold hover:bg-brand-gold-light transition-colors mt-4"
+            className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider text-brand-black bg-brand-beige hover:bg-brand-beige-light transition-colors mt-4 whitespace-nowrap"
           >
-            <span>Agendar Consulta</span>
+            <WhatsAppIcon className="w-4 h-4 text-brand-black" />
+            <span className="whitespace-nowrap">Agendar Consulta</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>

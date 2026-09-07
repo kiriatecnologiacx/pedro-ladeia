@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Stethoscope, FileSliders, Sparkles, UserCheck, ArrowRight } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function SurgicalProtocol() {
   const whatsappUrl =
@@ -43,17 +44,17 @@ export default function SurgicalProtocol() {
   ];
 
   return (
-    <section id="protocolo" className="py-24 sm:py-32 bg-brand-navy-light relative overflow-hidden">
+    <section id="protocolo" className="py-24 sm:py-32 bg-brand-beige-sand text-brand-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-gold uppercase mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
             <span>✦ DA PRIMEIRA AVALIAÇÃO AO PÓS-OPERATÓRIO</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white font-normal leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-black font-normal leading-tight mb-4">
             O Padrão Pedro Ladeia de Cuidado Cirúrgico.
           </h2>
-          <p className="text-sm sm:text-base text-brand-offwhite/70 font-light leading-relaxed">
+          <p className="text-sm sm:text-base text-brand-charcoal/80 font-light leading-relaxed">
             Um fluxo de atendimento estruturado para proporcionar clareza, previsibilidade e máxima segurança em todas as etapas da sua jornada visual.
           </p>
         </div>
@@ -65,33 +66,33 @@ export default function SurgicalProtocol() {
             return (
               <div
                 key={idx}
-                className="glass-panel p-8 rounded-3xl border border-white/10 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+                className="bg-white p-8 rounded-3xl border border-brand-beige/80 hover:border-brand-black/30 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-sm"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-serif text-3xl text-brand-gold font-bold">
+                    <span className="font-serif text-3xl text-brand-black font-bold">
                       {item.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-brand-beige-card flex items-center justify-center text-brand-charcoal group-hover:bg-brand-black group-hover:text-brand-beige transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <span className="text-[11px] font-sans uppercase tracking-widest text-brand-cyan block mb-2 font-medium">
+                  <span className="text-[11px] font-sans uppercase tracking-widest text-brand-beige-dark block mb-2 font-semibold">
                     {item.timeframe}
                   </span>
 
-                  <h3 className="font-serif text-xl text-white font-medium mb-3 group-hover:text-brand-gold-light transition-colors">
+                  <h3 className="font-serif text-xl text-brand-black font-medium mb-3">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-brand-offwhite/70 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-[11px] text-brand-gold uppercase tracking-wider font-semibold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+                <div className="mt-6 pt-4 border-t border-brand-beige/50 flex items-center gap-2 text-[11px] text-brand-black uppercase tracking-wider font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-beige-dark" />
                   <span>Excelência Médica</span>
                 </div>
               </div>
@@ -99,16 +100,17 @@ export default function SurgicalProtocol() {
           })}
         </div>
 
-        {/* Bottom CTA Banner */}
+        {/* Bottom CTA Banner (Single Line) */}
         <div className="mt-14 text-center">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-navy bg-gradient-to-r from-brand-gold-light via-brand-gold to-brand-gold-dark hover:brightness-110 shadow-xl shadow-brand-gold/20 transition-all group"
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-beige bg-brand-black hover:bg-brand-charcoal shadow-xl transition-all duration-200 whitespace-nowrap group"
           >
-            <span>Iniciar Minha Avaliação Oftalmológica</span>
-            <ArrowRight className="w-4 h-4 text-brand-navy group-hover:translate-x-1 transition-transform" />
+            <WhatsAppIcon className="w-4 h-4 text-brand-beige" />
+            <span className="whitespace-nowrap">Iniciar Minha Avaliação Oftalmológica</span>
+            <ArrowRight className="w-4 h-4 text-brand-beige group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>

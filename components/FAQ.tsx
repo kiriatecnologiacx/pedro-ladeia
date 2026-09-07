@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, MessageSquare } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -30,18 +31,18 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 sm:py-32 bg-brand-navy-light relative overflow-hidden">
+    <section id="faq" className="py-24 sm:py-32 bg-brand-beige-light text-brand-black relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-gold uppercase mb-3">
-            <HelpCircle className="w-3.5 h-3.5 text-brand-gold" />
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
+            <HelpCircle className="w-3.5 h-3.5 text-brand-beige-dark" />
             <span>ESCLARECIMENTOS & DÚVIDAS FREQUENTES</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl text-brand-black font-normal leading-tight mb-4">
             Perguntas frequentes sobre tratamentos e procedimentos.
           </h2>
-          <p className="text-sm text-brand-offwhite/70 font-light max-w-xl mx-auto">
+          <p className="text-sm text-brand-charcoal/80 font-light max-w-xl mx-auto">
             Transparência e segurança são valores fundamentais no cuidado com a sua saúde ocular.
           </p>
         </div>
@@ -53,19 +54,19 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="glass-panel rounded-2xl border border-white/10 overflow-hidden transition-all duration-200 hover:border-brand-gold/30"
+                className="bg-white rounded-2xl border border-brand-beige/70 overflow-hidden transition-all duration-200 hover:border-brand-black/30 shadow-sm"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-base sm:text-lg text-white font-medium">
+                  <span className="font-serif text-base sm:text-lg text-brand-black font-medium">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-brand-gold transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-brand-gold/15' : ''
+                    className={`w-8 h-8 rounded-full bg-brand-beige-card flex items-center justify-center shrink-0 text-brand-black transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 bg-brand-black text-brand-beige' : ''
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -73,7 +74,7 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 sm:px-7 pb-6 text-sm text-brand-offwhite/75 font-light leading-relaxed border-t border-white/5 pt-4 animate-fadeIn">
+                  <div className="px-6 sm:px-7 pb-6 text-sm text-brand-charcoal/80 font-light leading-relaxed border-t border-brand-beige/40 pt-4 animate-fadeIn">
                     {faq.a}
                   </div>
                 )}
@@ -82,15 +83,15 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* Direct Contact Prompt */}
-        <div className="mt-12 text-center glass-panel-gold p-6 rounded-2xl border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Direct Contact Prompt (Single line button) */}
+        <div className="mt-12 text-center bg-brand-beige-card p-6 rounded-2xl border border-brand-beige flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
-            <MessageSquare className="w-5 h-5 text-brand-gold shrink-0" />
+            <MessageSquare className="w-5 h-5 text-brand-black shrink-0" />
             <div>
-              <p className="text-xs sm:text-sm font-semibold text-white">
+              <p className="text-xs sm:text-sm font-semibold text-brand-black">
                 Ficou com alguma dúvida sobre o seu caso específico?
               </p>
-              <p className="text-xs text-brand-offwhite/60">
+              <p className="text-xs text-brand-charcoal/70">
                 Nossa equipe está à disposição para orientá-lo diretamente pelo WhatsApp.
               </p>
             </div>
@@ -99,9 +100,10 @@ export default function FAQ() {
             href="https://wa.me/5531998972000?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20espec%C3%ADfica%20para%20o%20Dr.%20Pedro%20Ladeia."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-navy text-xs font-semibold uppercase tracking-wider hover:bg-brand-gold-light transition-colors shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-black text-brand-beige text-xs font-semibold uppercase tracking-wider hover:bg-brand-charcoal transition-colors shrink-0 whitespace-nowrap"
           >
-            Falar Conosco
+            <WhatsAppIcon className="w-3.5 h-3.5 text-brand-beige" />
+            <span className="whitespace-nowrap">Falar Conosco</span>
           </a>
         </div>
       </div>

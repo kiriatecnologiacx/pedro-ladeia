@@ -1,12 +1,13 @@
 import React from 'react';
-import { ArrowUpRight, Instagram, Phone, MapPin } from 'lucide-react';
+import { ArrowUpRight, Instagram } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Footer() {
   const whatsappUrl =
     'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20do%20Dr.%20Pedro%20Ladeia.';
 
   return (
-    <footer className="bg-brand-navy-deep border-t border-white/10 pt-20 pb-12 text-brand-offwhite/70">
+    <footer className="bg-brand-black-deep border-t border-white/10 pt-20 pb-12 text-brand-offwhite/70">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-16 border-b border-white/10">
           {/* Col 1 & 2: Brand Identity */}
@@ -16,9 +17,9 @@ export default function Footer() {
                 <span className="font-serif text-2xl font-bold tracking-tight text-white">
                   DR. PEDRO LADEIA
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
               </div>
-              <p className="text-[11px] font-sans tracking-[0.25em] text-brand-gold uppercase font-medium mb-6">
+              <p className="text-[11px] font-sans tracking-[0.25em] text-brand-beige uppercase font-medium mb-6">
                 Alta Oftalmologia · Córnea & Catarata
               </p>
               <p className="text-xs sm:text-sm text-brand-offwhite/60 font-light leading-relaxed max-w-sm mb-6">
@@ -31,7 +32,7 @@ export default function Footer() {
                 href="https://instagram.com/pedrohladeia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-brand-gold hover:border-brand-gold/50 transition-colors"
+                className="w-9 h-9 rounded-full glass-panel-dark flex items-center justify-center text-white/70 hover:text-brand-beige hover:border-brand-beige/50 transition-colors"
                 aria-label="Instagram Dr. Pedro Ladeia"
               >
                 <Instagram className="w-4 h-4" />
@@ -40,10 +41,10 @@ export default function Footer() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-brand-gold hover:border-brand-gold/50 transition-colors"
+                className="w-9 h-9 rounded-full glass-panel-dark flex items-center justify-center text-white/70 hover:text-brand-beige hover:border-brand-beige/50 transition-colors"
                 aria-label="WhatsApp Dr. Pedro Ladeia"
               >
-                <Phone className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white/70 hover:text-brand-beige" />
               </a>
             </div>
           </div>
@@ -55,32 +56,32 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs">
               <li>
-                <a href="#sobre" className="hover:text-brand-gold transition-colors">
+                <a href="#sobre" className="hover:text-brand-beige transition-colors">
                   Sobre o Médico
                 </a>
               </li>
               <li>
-                <a href="#especialidades" className="hover:text-brand-gold transition-colors">
+                <a href="#especialidades" className="hover:text-brand-beige transition-colors">
                   Áreas de Atuação
                 </a>
               </li>
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Cirurgias Premium
                 </a>
               </li>
               <li>
-                <a href="#protocolo" className="hover:text-brand-gold transition-colors">
+                <a href="#protocolo" className="hover:text-brand-beige transition-colors">
                   Protocolo Cirúrgico
                 </a>
               </li>
               <li>
-                <a href="#unidades" className="hover:text-brand-gold transition-colors">
+                <a href="#unidades" className="hover:text-brand-beige transition-colors">
                   Unidades de Atendimento
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-brand-gold transition-colors">
+                <a href="#faq" className="hover:text-brand-beige transition-colors">
                   Perguntas Frequentes
                 </a>
               </li>
@@ -94,27 +95,27 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs">
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Catarata & Lentes Premium
                 </a>
               </li>
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Tratamento de Ceratocone
                 </a>
               </li>
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Anel Intrastromal
                 </a>
               </li>
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Cirurgia Refrativa Laser
                 </a>
               </li>
               <li>
-                <a href="#cirurgias" className="hover:text-brand-gold transition-colors">
+                <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
                   Exames & Biometria Óptica
                 </a>
               </li>
@@ -140,8 +141,9 @@ export default function Footer() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-brand-gold hover:text-white transition-colors font-medium"
+                  className="inline-flex items-center gap-1.5 text-brand-beige hover:text-white transition-colors font-medium whitespace-nowrap"
                 >
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-brand-beige" />
                   <span>(31) 99897-2000</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
