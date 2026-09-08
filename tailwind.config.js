@@ -18,12 +18,17 @@ module.exports = {
     extend: {
       colors: {
         brand: {
+          navy: {
+            DEFAULT: '#0B1B33',
+            deep: '#06101E',
+            surface: '#0E223D',
+            card: '#122A4A',
+            border: 'rgba(255, 255, 255, 0.08)',
+          },
           black: {
             DEFAULT: '#0A0A0A',
             deep: '#050505',
             surface: '#121212',
-            card: '#181818',
-            border: 'rgba(255, 255, 255, 0.1)',
           },
           beige: {
             DEFAULT: '#D8CBB7',

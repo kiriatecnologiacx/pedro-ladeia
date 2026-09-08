@@ -29,30 +29,31 @@ export default function AboutDoctor() {
   ];
 
   return (
-    <section id="sobre" className="py-24 sm:py-32 bg-brand-black relative overflow-hidden">
+    <section id="sobre" className="py-20 sm:py-28 lg:py-32 bg-brand-navy-deep relative overflow-hidden">
       {/* Subtle Background Elements */}
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-beige/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-80 sm:w-96 h-80 sm:h-96 bg-brand-navy/60 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Doctor Photo Frame */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-dark p-2 shadow-2xl border border-brand-beige/25">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-black-surface">
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden glass-panel-navy p-2 shadow-2xl border border-brand-beige/25">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-navy-surface">
                 <Image
                   src="/dr_pedro_about.jpg"
                   alt="Dr. Pedro Henrique Ladeia Cruz no consultório"
                   fill
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 420px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/95 via-brand-navy-deep/20 to-transparent" />
                 
                 {/* Embedded Quote */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="font-serif italic text-white/90 text-sm sm:text-base leading-snug mb-2">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                  <p className="font-serif italic text-white/95 text-xs sm:text-sm leading-snug mb-2">
                     “A visão é o sentido mais precioso do ser humano. Cuidar dela exige rigor científico inegociável e sensibilidade médica profunda.”
                   </p>
-                  <p className="text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
+                  <p className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
                     — Dr. Pedro Henrique Ladeia Cruz
                   </p>
                 </div>
@@ -60,20 +61,20 @@ export default function AboutDoctor() {
             </div>
 
             {/* Decorative Beige Accent Frame */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
+            <div className="hidden sm:block absolute -bottom-3 -right-3 w-28 h-28 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
           </div>
 
           {/* Right Column: Editorial Narrative & Authority */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
               <span>✦ TRAJETÓRIA MÉDICA & AUTORIDADE</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white font-normal leading-tight mb-6">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-tight mb-5 sm:mb-6">
               Mais de 15 anos construindo confiança e excelência na oftalmologia mineira.
             </h2>
 
-            <div className="space-y-4 text-sm sm:text-base text-brand-offwhite/80 font-light leading-relaxed mb-8">
+            <div className="space-y-3.5 sm:space-y-4 text-xs sm:text-sm lg:text-base text-brand-offwhite/80 font-light leading-relaxed mb-6 sm:mb-8">
               <p>
                 O <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> construiu 
                 uma trajetória sólida ao longo de mais de 15 anos dedicados à oftalmologia de excelência, 
@@ -91,22 +92,22 @@ export default function AboutDoctor() {
             </div>
 
             {/* Credential Grid */}
-            <div className="grid sm:grid-cols-2 gap-4 w-full mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full mb-6 sm:mb-8">
               {credentials.map((c, idx) => {
                 const Icon = c.icon;
                 return (
                   <div
                     key={idx}
-                    className="glass-panel-dark p-4 rounded-2xl border border-white/5 flex items-start gap-3.5 hover:border-brand-beige/30 transition-colors"
+                    className="glass-panel-navy p-3.5 sm:p-4 rounded-2xl border border-white/10 flex items-start gap-3 hover:border-brand-beige/30 transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mt-0.5">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mt-0.5">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-1">
+                      <h4 className="text-[11px] sm:text-xs font-semibold text-white uppercase tracking-wider mb-1">
                         {c.title}
                       </h4>
-                      <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
+                      <p className="text-[11px] sm:text-xs text-brand-offwhite/60 font-light leading-relaxed">
                         {c.desc}
                       </p>
                     </div>
@@ -116,9 +117,9 @@ export default function AboutDoctor() {
             </div>
 
             {/* Commitment Highlight */}
-            <div className="w-full glass-panel-dark p-4 rounded-2xl border border-brand-beige/30 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0">
-                <CheckCircle className="w-5 h-5" />
+            <div className="w-full glass-panel-navy p-4 rounded-2xl border border-brand-beige/30 flex items-center gap-3.5">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <p className="text-xs sm:text-sm text-brand-offwhite/90 font-light">
                 <strong className="text-white font-medium">Compromisso Ético & Científico:</strong> Cada indicação cirúrgica é estritamente personalizada, priorizando a segurança e a longevidade visual de cada paciente.
