@@ -27,18 +27,24 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 sm:py-32 bg-brand-beige-light text-brand-black relative overflow-hidden">
+    <section id="faq" className="py-24 sm:py-32 bg-brand-navy-deep text-brand-offwhite relative overflow-hidden">
+      {/* Subtle Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-20 w-80 sm:w-96 h-80 sm:h-96 bg-brand-navy/60 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-brand-beige/5 rounded-full blur-3xl" />
+      </div>
+
       <div className="max-w-4xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
-            <HelpCircle className="w-3.5 h-3.5 text-brand-beige-dark" />
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
+            <HelpCircle className="w-3.5 h-3.5 text-brand-beige" />
             <span>ESCLARECIMENTOS & DÚVIDAS FREQUENTES</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-brand-black font-normal leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal leading-tight mb-4">
             Perguntas frequentes sobre tratamentos e procedimentos.
           </h2>
-          <p className="text-sm text-brand-charcoal/80 font-light max-w-xl mx-auto">
+          <p className="text-sm text-brand-offwhite/75 font-light max-w-xl mx-auto">
             Transparência e segurança são valores fundamentais no cuidado com a sua saúde ocular.
           </p>
         </div>
@@ -50,19 +56,19 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-brand-beige/70 overflow-hidden transition-all duration-200 hover:border-brand-black/30 shadow-sm"
+                className="glass-panel-navy rounded-2xl border border-brand-beige/25 overflow-hidden transition-all duration-200 hover:border-brand-beige/50 shadow-xl"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-base sm:text-lg text-brand-black font-medium">
+                  <span className="font-serif text-base sm:text-lg text-white font-medium">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-brand-beige-card flex items-center justify-center shrink-0 text-brand-black transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-brand-black text-brand-beige' : ''
+                    className={`w-8 h-8 rounded-full bg-brand-beige/15 border border-brand-beige/30 flex items-center justify-center shrink-0 text-brand-beige transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 bg-brand-beige text-brand-navy-deep' : ''
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -70,7 +76,7 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 sm:px-7 pb-6 text-sm text-brand-charcoal/80 font-light leading-relaxed border-t border-brand-beige/40 pt-4 animate-fadeIn">
+                  <div className="px-6 sm:px-7 pb-6 text-sm text-brand-offwhite/85 font-light leading-relaxed border-t border-white/10 pt-4 animate-fadeIn">
                     {faq.a}
                   </div>
                 )}
@@ -80,14 +86,14 @@ export default function FAQ() {
         </div>
 
         {/* Direct Contact Prompt (Single line button) */}
-        <div className="mt-12 text-center bg-brand-beige-card p-6 rounded-2xl border border-brand-beige flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 text-center glass-panel-navy p-6 rounded-2xl border border-brand-beige/35 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
           <div className="flex items-center gap-3 text-left">
-            <MessageSquare className="w-5 h-5 text-brand-black shrink-0" />
+            <MessageSquare className="w-5 h-5 text-brand-beige shrink-0" />
             <div>
-              <p className="text-xs sm:text-sm font-semibold text-brand-black">
+              <p className="text-xs sm:text-sm font-semibold text-white">
                 Ficou com alguma dúvida sobre o seu caso específico?
               </p>
-              <p className="text-xs text-brand-charcoal/70">
+              <p className="text-xs text-brand-offwhite/70">
                 Nossa equipe está à disposição para orientá-lo diretamente pelo WhatsApp.
               </p>
             </div>
@@ -96,9 +102,9 @@ export default function FAQ() {
             href="https://wa.me/5531998972000?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20espec%C3%ADfica%20para%20o%20Dr.%20Pedro%20Ladeia."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-black text-brand-beige text-xs font-semibold uppercase tracking-wider hover:bg-brand-charcoal transition-colors shrink-0 whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-beige text-brand-navy-deep text-xs font-semibold uppercase tracking-wider hover:bg-brand-beige-light transition-colors shrink-0 whitespace-nowrap shadow-md"
           >
-            <WhatsAppIcon className="w-3.5 h-3.5 text-brand-beige" />
+            <WhatsAppIcon className="w-3.5 h-3.5 text-brand-navy-deep" />
             <span className="whitespace-nowrap">Falar Conosco</span>
           </a>
         </div>

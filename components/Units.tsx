@@ -41,19 +41,19 @@ export default function Units() {
   ];
 
   return (
-    <section id="unidades" className="py-20 sm:py-28 lg:py-32 bg-brand-navy-deep text-brand-offwhite relative overflow-hidden">
+    <section id="unidades" className="py-20 sm:py-28 lg:py-32 bg-brand-beige-sand text-brand-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 sm:mb-16 gap-5">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
               <span>✦ UNIDADES DE ATENDIMENTO</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-tight">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black font-normal leading-tight">
               Duas localizações estratégicas para o seu conforto.
             </h2>
           </div>
-          <p className="font-sans text-xs sm:text-sm text-brand-offwhite/70 max-w-md font-light leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-brand-charcoal/80 max-w-md font-light leading-relaxed">
             Escolha o polo de atendimento ideal para você com a mesma dedicação técnica e acolhimento do Dr. Pedro Ladeia.
           </p>
         </div>
@@ -66,41 +66,41 @@ export default function Units() {
             return (
               <div
                 key={index}
-                className="glass-panel-navy p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-brand-beige/25 hover:border-brand-beige/50 transition-all duration-300 shadow-2xl flex flex-col justify-between"
+                className="bg-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-brand-beige/80 hover:border-brand-black/30 transition-all duration-300 shadow-lg hover:shadow-xl flex flex-col justify-between"
               >
                 <div>
                   {/* Top Badge */}
                   <div className="flex items-center justify-between mb-5 sm:mb-6">
-                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full bg-brand-beige/15 text-brand-beige font-semibold border border-brand-beige/30">
+                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full bg-brand-beige-sand text-brand-charcoal font-semibold border border-brand-beige">
                       {unit.badge}
                     </span>
-                    <Building2 className="w-5 h-5 text-brand-beige shrink-0" />
+                    <Building2 className="w-5 h-5 text-brand-beige-dark shrink-0" />
                   </div>
 
-                  <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl text-white font-normal mb-1.5">
+                  <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-black font-normal mb-1.5">
                     {unit.name}
                   </h3>
 
-                  <p className="text-[11px] sm:text-xs text-brand-beige uppercase tracking-wider font-semibold mb-4">
+                  <p className="text-[11px] sm:text-xs text-brand-beige-dark uppercase tracking-wider font-semibold mb-4">
                     {unit.region}
                   </p>
 
-                  <p className="text-xs sm:text-sm text-brand-offwhite/75 font-light leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed mb-6">
                     {unit.description}
                   </p>
 
                   {/* Location & Details Info */}
-                  <div className="space-y-2.5 py-4 border-y border-white/10 text-xs text-brand-offwhite/85 mb-6">
+                  <div className="space-y-2.5 py-4 border-y border-brand-beige/50 text-xs text-brand-charcoal mb-6">
                     <div className="flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-brand-beige shrink-0 mt-0.5" />
+                      <MapPin className="w-4 h-4 text-brand-beige-dark shrink-0 mt-0.5" />
                       <span>{unit.address}</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <Phone className="w-4 h-4 text-brand-beige shrink-0" />
+                      <Phone className="w-4 h-4 text-brand-beige-dark shrink-0" />
                       <span>{unit.phone} · WhatsApp & Ligações</span>
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <Clock className="w-4 h-4 text-brand-beige shrink-0" />
+                      <Clock className="w-4 h-4 text-brand-beige-dark shrink-0" />
                       <span>{unit.hours}</span>
                     </div>
                   </div>
@@ -108,8 +108,8 @@ export default function Units() {
                   {/* Highlights list */}
                   <div className="space-y-2 mb-6 sm:mb-8">
                     {unit.highlights.map((h, hIdx) => (
-                      <div key={hIdx} className="flex items-center gap-2 text-[11px] sm:text-xs text-brand-offwhite/70 font-light">
-                        <ShieldCheck className="w-3.5 h-3.5 text-brand-beige shrink-0" />
+                      <div key={hIdx} className="flex items-center gap-2 text-[11px] sm:text-xs text-brand-charcoal/85 font-light">
+                        <ShieldCheck className="w-3.5 h-3.5 text-brand-beige-dark shrink-0" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -121,13 +121,13 @@ export default function Units() {
                   href={bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between w-full p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-brand-beige text-brand-navy-deep text-xs font-semibold uppercase tracking-wider hover:bg-brand-beige-light transition-all group/btn whitespace-nowrap shadow-md"
+                  className="inline-flex items-center justify-between w-full p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-brand-black text-brand-beige text-xs font-semibold uppercase tracking-wider hover:bg-brand-charcoal transition-all group/btn whitespace-nowrap shadow-md"
                 >
                   <span className="inline-flex items-center gap-2 whitespace-nowrap truncate">
-                    <WhatsAppIcon className="w-3.5 h-3.5 text-brand-navy-deep shrink-0" />
+                    <WhatsAppIcon className="w-3.5 h-3.5 text-brand-beige shrink-0" />
                     <span className="whitespace-nowrap truncate">Agendar Consulta nesta Unidade</span>
                   </span>
-                  <ArrowUpRight className="w-4 h-4 text-brand-navy-deep group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform shrink-0 ml-2" />
+                  <ArrowUpRight className="w-4 h-4 text-brand-beige group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform shrink-0 ml-2" />
                 </a>
               </div>
             );
