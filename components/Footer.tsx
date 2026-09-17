@@ -56,13 +56,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 sm:space-y-3 text-xs">
               <li>
-                <a href="#sobre" className="hover:text-brand-beige transition-colors">
-                  Sobre o Médico
+                <a href="#protocolo" className="hover:text-brand-beige transition-colors">
+                  Protocolo Cirúrgico
                 </a>
               </li>
               <li>
-                <a href="#especialidades" className="hover:text-brand-beige transition-colors">
-                  Áreas de Atuação
+                <a href="#sobre" className="hover:text-brand-beige transition-colors">
+                  Sobre o Médico
                 </a>
               </li>
               <li>
@@ -71,18 +71,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#protocolo" className="hover:text-brand-beige transition-colors">
-                  Protocolo Cirúrgico
+                <a href="#faq" className="hover:text-brand-beige transition-colors">
+                  Perguntas Frequentes
                 </a>
               </li>
               <li>
                 <a href="#unidades" className="hover:text-brand-beige transition-colors">
                   Unidades de Atendimento
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-brand-beige transition-colors">
-                  Perguntas Frequentes
                 </a>
               </li>
             </ul>

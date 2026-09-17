@@ -2,30 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowRight, Phone, Award, ShieldCheck, GraduationCap, Sparkles } from 'lucide-react';
+import { ArrowRight, Phone, ShieldCheck, Sparkles } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function AboutDoctor() {
   const whatsappUrl =
     'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
-
-  const credentials = [
-    {
-      title: 'Especialista em Córnea & Catarata',
-      desc: 'Formação aprofundada em microcirurgia de alta complexidade.',
-      icon: GraduationCap,
-    },
-    {
-      title: '+ de 10 Anos de Experiência',
-      desc: 'Reconhecimento consistente em procedimentos de precisão e ectasias.',
-      icon: Award,
-    },
-    {
-      title: '2 Polos de Atendimento',
-      desc: 'Atendimento Individualizado e de alto padrão no Vila da Serra e PHD Olhos.',
-      icon: ShieldCheck,
-    },
-  ];
 
   return (
     <section id="sobre" className="py-20 sm:py-28 lg:py-32 bg-brand-navy-deep relative overflow-hidden">
@@ -73,44 +55,21 @@ export default function AboutDoctor() {
             <div className="hidden sm:block absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
           </div>
 
-          {/* Right Column: Unified Conversion & Authority Proposition */}
+          {/* Right Column: Transforme a sua qualidade de vida visual */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3 sm:mb-4">
-              <span>✦ ATENDIMENTO INDIVIDUALIZADO E DE ALTO PADRÃO</span>
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-beige" />
+              <span>✦ TRANSFORME A SUA QUALIDADE DE VIDA VISUAL</span>
             </div>
 
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-tight mb-4 sm:mb-5">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-white font-normal leading-tight mb-4 sm:mb-6">
               Sua visão é única. O seu tratamento oftalmológico também deve ser.
             </h2>
 
-            <p className="text-xs sm:text-sm lg:text-base text-brand-offwhite/85 font-light leading-relaxed mb-6 sm:mb-8">
-              Com <strong className="text-white font-medium">+ de 10 anos de experiência</strong> e{' '}
-              uma sólida reputação em Minas Gerais, o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> une{' '}
-              diagnósticos avançados, tecnologia microcirúrgica de ponta e um plano personalizado desenhado com rigor absoluto para a sua liberdade visual.
+            <p className="text-xs sm:text-base lg:text-lg text-brand-offwhite/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+              Agende uma consulta com o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> e{' '}
+              tenha acesso a uma avaliação oftalmológica completa, tecnologia de ponta e um plano cirúrgico desenhado com precisão para os seus olhos.
             </p>
-
-            {/* Compact Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mb-7 sm:mb-9">
-              {credentials.map((c, idx) => {
-                const Icon = c.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="glass-panel-navy p-3.5 rounded-2xl border border-white/10 hover:border-brand-beige/30 transition-colors"
-                  >
-                    <div className="w-7 h-7 rounded-lg bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mb-2">
-                      <Icon className="w-3.5 h-3.5" />
-                    </div>
-                    <h5 className="text-[11px] font-semibold text-white uppercase tracking-wider mb-1">
-                      {c.title}
-                    </h5>
-                    <p className="text-[10px] sm:text-[11px] text-brand-offwhite/65 font-light leading-snug">
-                      {c.desc}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
 
             {/* Direct Actions */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
@@ -135,7 +94,7 @@ export default function AboutDoctor() {
             </div>
 
             {/* Credential Tags */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-white/10 text-[11px] text-brand-offwhite/60">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-white/10 text-[11px] sm:text-xs text-brand-offwhite/60">
               <span>✦ Atendimento: Nova Lima & Santa Luzia</span>
               <span>✦ Especialista em Córnea, Catarata e Ceratocone</span>
               <span>✦ CRM-MG</span>

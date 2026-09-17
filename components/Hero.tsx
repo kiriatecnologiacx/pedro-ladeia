@@ -126,12 +126,12 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/95 via-brand-navy-deep/30 to-transparent" />
 
                 {/* Embedded Doctor Quote Card */}
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 glass-panel-navy p-3 sm:p-3.5 rounded-xl border border-brand-beige/30 backdrop-blur-md">
-                  <p className="font-serif italic text-white/95 text-[11px] sm:text-xs leading-snug mb-1.5 uppercase">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-brand-navy-deep/95 p-3.5 sm:p-4 rounded-xl border border-brand-beige/40 shadow-2xl backdrop-blur-md">
+                  <p className="font-sans font-semibold text-white text-xs sm:text-[13px] leading-snug tracking-wide mb-1.5 uppercase">
                     “MINHA MISSÃO É PROPORCIONAR SUA TÃO SONHADA LIBERDADE VISUAL ATRAVÉS DE CIRURGIAS ULTRA PERSONALIZADAS”
                   </p>
-                  <p className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
-                    - Dr Pedro Ladeia
+                  <p className="text-[11px] font-sans uppercase tracking-widest text-brand-beige font-bold">
+                    — Dr. Pedro Ladeia
                   </p>
                 </div>
               </div>
