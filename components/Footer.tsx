@@ -20,10 +20,10 @@ export default function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
               </div>
               <p className="text-[10px] sm:text-[11px] font-sans tracking-[0.22em] text-brand-beige uppercase font-medium mb-4 sm:mb-6">
-                Alta Oftalmologia · Córnea & Catarata
+                Oftalmologia de excelência · Córnea & Catarata
               </p>
               <p className="text-xs sm:text-sm text-brand-offwhite/60 font-light leading-relaxed max-w-sm mb-6">
-                Mais de 15 anos dedicados à excelência cirúrgica, restauração visual e segurança oftalmológica em Minas Gerais.
+                + de 10 anos de experiência dedicados à excelência cirúrgica, restauração visual e segurança oftalmológica em Minas Gerais.
               </p>
             </div>
 
@@ -130,7 +130,7 @@ export default function Footer() {
             <div className="space-y-3.5 text-xs">
               <div>
                 <p className="font-semibold text-white">Nova Lima — MG</p>
-                <p className="text-brand-offwhite/50 text-[11px]">Vila da Serra · Atendimento Privativo</p>
+                <p className="text-brand-offwhite/50 text-[11px]">Vila da Serra · Atendimento Individualizado e de alto padrão</p>
               </div>
               <div>
                 <p className="font-semibold text-white">Santa Luzia — MG</p>

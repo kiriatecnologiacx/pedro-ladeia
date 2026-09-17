@@ -8,13 +8,13 @@ export default function Units() {
   const units = [
     {
       name: 'Unidade Nova Lima',
-      badge: 'Atendimento Privativo & Exclusivo',
+      badge: 'Atendimento Individualizado e de Alto Padrão',
       region: 'Vila da Serra / Alameda da Serra',
       address: 'Polo Médico e Empresarial de Nova Lima — MG',
       phone: '(31) 99897-2000',
       hours: 'Segunda a Sexta · Horários Agendados',
       description:
-        'Consultório privativo desenhado para oferecer máxima discrição, pontualidade e sofisticação no coração do Vila da Serra.',
+        'Consultório privativo desenhado para oferecer Atendimento Individualizado e de alto padrão, discrição e pontualidade no coração do Vila da Serra.',
       highlights: [
         'Avaliação pré-operatória de alta complexidade',
         'Catarata com Lentes Premium e Refrativa a Laser',
@@ -24,7 +24,7 @@ export default function Units() {
     },
     {
       name: 'Unidade Santa Luzia (PHD Olhos)',
-      badge: 'Clínica Consolidada · 15+ Anos',
+      badge: 'Clínica Consolidada · + de 10 Anos de Experiência',
       region: 'Centro Histórico & Comercial',
       address: 'Rua Santa Luzia, 292 — Centro, Santa Luzia — MG',
       phone: '(31) 99897-2000',

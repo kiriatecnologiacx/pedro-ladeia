@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Dr. Pedro Ladeia — Oftalmologia de Alta Precisão | Córnea & Catarata',
+  title: 'Dr. Pedro Ladeia — Oftalmologia de excelência | Córnea & Catarata',
   description:
-    'Mais de 15 anos de excelência médica e autoridade cirúrgica em Córnea, Catarata e Ceratocone. Atendimento privativo em Nova Lima e Santa Luzia.',
+    '+ de 10 anos de experiência médica e autoridade cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
   keywords: [
     'Dr. Pedro Ladeia',
     'Oftalmologista Nova Lima',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Dr. Pedro Henrique Ladeia Cruz' }],
   openGraph: {
-    title: 'Dr. Pedro Ladeia — Oftalmologia de Alta Precisão',
+    title: 'Dr. Pedro Ladeia — Oftalmologia de excelência',
     description:
-      'Mais de 15 anos de autoridade cirúrgica em Córnea, Catarata e Ceratocone. Atendimento em Nova Lima e Santa Luzia.',
+      '+ de 10 anos de experiência cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
     url: 'https://pedroladeia.com.br',
     siteName: 'Dr. Pedro Ladeia Oftalmologia',
     locale: 'pt_BR',
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Pedro Ladeia — Oftalmologia de Alta Precisão',
+    title: 'Dr. Pedro Ladeia — Oftalmologia de excelência',
     description:
-      'Mais de 15 anos de autoridade cirúrgica em Córnea, Catarata e Ceratocone. Atendimento em Nova Lima e Santa Luzia.',
+      '+ de 10 anos de experiência cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
   },
 };
 

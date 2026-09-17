@@ -13,20 +13,16 @@ export default function FAQ() {
       a: 'A cirurgia moderna de catarata substitui o cristalino opaco por uma lente intraocular artificial altamente avançada. As lentes trifocais e de foco estendido corrigem a visão para perto, meia distância e longe simultaneamente. Pacientes com astigmatismo utilizam lentes tóricas personalizadas, permitindo excelente independência dos óculos na maioria das atividades do cotidiano.',
     },
     {
-      q: 'Tenho Ceratocone. Quais são as melhores abordagens de tratamento?',
-      a: 'O tratamento do ceratocone depende do estágio da ectasia. Nos estágios iniciais e em progressão, o Crosslinking do Colágeno Corneano estabiliza a estrutura da córnea. Para regularizar a curvatura e melhorar a visão, o implante de Anel Intrastromal (como o Anel de Ferrara) é altamente eficaz. Além disso, dispomos de adaptação precisa de lentes de contato esclerais sob medida.',
+      q: 'Tenho ceratocone. Quais são as melhores abordagens de tratamento?',
+      a: 'O tratamento do ceratocone depende do estágio da ectasia. Nos estágios iniciais e em progressão, o Crosslinking do Colágeno Corneano estabiliza a estrutura da córnea. Para regularizar a curvatura e melhorar a visão, o implante de Anel Intraestromal (como o Anel de Ferrara) é altamente eficaz. Além disso, dispomos de adaptação precisa de lentes de contato esclerais sob medida.',
     },
     {
       q: 'A cirurgia refrativa a laser dói? Qual é o tempo de recuperação?',
-      a: 'O procedimento é completamente indolor, realizado sob anestesia tópica com colírios específicos. O laser age em poucos segundos por olho. Na técnica LASIK, a recuperação visual é notada logo nas primeiras 24 horas. Na técnica PRK, a visão se estabiliza gradualmente ao longo dos primeiros dias, sempre com acompanhamento minucioso.',
+      a: 'O procedimento é indolor, realizado sob anestesia tópica com colírios específicos. O laser age em poucos segundos por olho. Na técnica LASIK, a recuperação visual é notada logo nas primeiras 24 horas. Na técnica PRK, a visão se estabiliza gradualmente ao longo dos primeiros dias, sempre com acompanhamento minucioso.',
     },
     {
       q: 'Qual é a diferença entre as consultas em Nova Lima e em Santa Luzia?',
-      a: 'Ambas as unidades contam com a condução médica e o rigor técnico do Dr. Pedro Ladeia. A unidade de Nova Lima foi especialmente estruturada para atendimentos privativos e avaliações personalizadas no polo do Vila da Serra, enquanto a unidade de Santa Luzia (PHD Olhos) conta com nossa infraestrutura consolidada de exames e atendimento regional.',
-    },
-    {
-      q: 'O consultório emite documentação para reembolso de convênios?',
-      a: 'Sim. Oferecemos atendimento focado na excelência e personalização de cada consulta, emitindo nota fiscal detalhada, relatórios e laudos cirúrgicos completos para que você solicite o reembolso diretamente junto ao seu plano de saúde.',
+      a: 'Ambas as unidades contam com a condução médica e o rigor técnico do Dr. Pedro Ladeia. A unidade de Nova Lima foi estruturada para proporcionar Atendimento Individualizado e de alto padrão no polo do Vila da Serra, enquanto a unidade de Santa Luzia (PHD Olhos) conta com nossa infraestrutura consolidada de exames e atendimento regional.',
     },
   ];
 

@@ -21,7 +21,7 @@ export default function SurgicalProtocol() {
       step: '02',
       title: 'Planejamento Cirúrgico sob Medida',
       description:
-        'Escolha customizada da lente intraocular premium (trifocal, tórica) ou protocolo de anel / crosslinking / laser. Transparência total sobre expectativas e recuperação.',
+        'Escolha customizada da lente intraocular premium (trifocal, tórica) ou indicação de anel intraestromal, crosslinking ou laser. Transparência total sobre expectativas e recuperação.',
       icon: FileSliders,
       timeframe: 'Etapa 2 · Estratégia',
     },
@@ -29,7 +29,7 @@ export default function SurgicalProtocol() {
       step: '03',
       title: 'Procedimento com Máxima Precisão & Conforto',
       description:
-        'Realizado em centro cirúrgico oftalmológico de referência com anestesia em colírio, sedação leve e tecnologia laser de última geração. Duração rápida e indolor.',
+        'Realizado em centro cirúrgico oftalmológico de referência com anestesia em colírio, sedação leve e tecnologia a laser de última geração. Procedimento seguro, ágil e confortável.',
       icon: Sparkles,
       timeframe: 'Etapa 3 · Execução',
     },

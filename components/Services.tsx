@@ -24,9 +24,9 @@ export default function Services() {
       title: 'Cirurgia de Catarata & Lentes Premium',
       category: 'Restauração Visual',
       shortDesc:
-        'Microcirurgia de alta precisão com implante de lentes intraoculares para recuperação da visão nítida e independência dos óculos.',
+        'Procedimento microcirúrgico a laser, com implante de lentes intraoculares para recuperação da visão nítida e máxima independência dos óculos.',
       fullDesc:
-        'Procedimento microcirúrgico a laser com implante de lentes intraoculares de última geração (multifocais, trifocais e tóricas). Permite recuperar a visão nítida em todas as distâncias com máxima independência dos óculos.',
+        'Procedimento microcirúrgico a laser, com implante de lentes intraoculares de última geração (multifocais, trifocais e tóricas). Permite recuperar a visão nítida em todas as distâncias com máxima independência dos óculos.',
       features: [
         'Cálculo biométrico de alta precisão a laser',
         'Lentes tóricas para correção de astigmatismo',
@@ -40,16 +40,16 @@ export default function Services() {
       title: 'Tratamento Avançado de Ceratocone',
       category: 'Especialidade em Córnea',
       shortDesc:
-        'Referência em Minas Gerais na estabilização da córnea e reabilitação óptica com Crosslinking, Anel de Ferrara e lentes esclerais.',
+        'Abordagem personalizada com Crosslinking para estabilização da córnea, Implante de Anel Intrastromal (Ferrara) e adaptação de lentes esclerais de alta performance.',
       fullDesc:
-        'Uma das maiores referências no tratamento do ceratocone em Minas Gerais. Abordagem personalizada com Crosslinking para estabilização da córnea, Implante de Anel Intrastromal (Ferrara) e adaptação de lentes esclerais de alta performance.',
+        'Abordagem personalizada com Crosslinking para estabilização da córnea, Implante de Anel Intrastromal (Ferrara) e adaptação de lentes esclerais de alta performance.',
       features: [
         'Crosslinking do colágeno corneano',
         'Implante de anel intraestromal a laser',
         'Lentes de contato esclerais sob medida',
       ],
       icon: Sparkles,
-      tag: 'Referência em Córnea',
+      tag: 'Córnea & Ceratocone',
     },
     {
       number: '03',
@@ -87,7 +87,7 @@ export default function Services() {
 
   return (
     <section
-      id="especialidades"
+      id="cirurgias"
       className="py-20 sm:py-28 bg-brand-beige-light text-brand-black relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -98,7 +98,7 @@ export default function Services() {
               <span>✦ ÁREAS DE ATUAÇÃO & CIRURGIAS</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-brand-black font-normal leading-tight">
-              Excelência técnica e tecnologia para cada detalhe da sua visão.
+              Excelência técnica para cada detalhe da sua visão.
             </h2>
           </div>
           <p className="font-sans text-xs sm:text-sm text-brand-charcoal/80 max-w-md font-light leading-relaxed">
@@ -132,7 +132,7 @@ export default function Services() {
               </p>
               <div className="flex items-center gap-2 text-[11px] sm:text-xs text-brand-black font-medium uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-beige-dark shrink-0" />
-                <span>Rigor técnico validado por 15+ anos de prática cirúrgica</span>
+                <span>Rigor técnico validado por + de 10 anos de experiência cirúrgica</span>
               </div>
             </div>
           </div>

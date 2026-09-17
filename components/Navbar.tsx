@@ -20,12 +20,11 @@ export default function Navbar() {
     'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
 
   const navLinks = [
-    { name: 'Sobre o Médico', href: '#sobre' },
-    { name: 'Especialidades', href: '#especialidades' },
-    { name: 'Cirurgias Premium', href: '#cirurgias' },
     { name: 'Protocolo', href: '#protocolo' },
-    { name: 'Unidades', href: '#unidades' },
+    { name: 'Sobre o Médico', href: '#sobre' },
+    { name: 'Cirurgias Premium', href: '#cirurgias' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Unidades', href: '#unidades' },
   ];
 
   return (
@@ -46,7 +45,7 @@ export default function Navbar() {
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
           </div>
           <span className="text-[9px] sm:text-[10px] md:text-[11px] font-sans tracking-[0.2em] text-brand-beige uppercase font-medium">
-            Alta Oftalmologia · Córnea & Catarata
+            Oftalmologia de excelência · Córnea & Catarata
           </span>
         </a>
 

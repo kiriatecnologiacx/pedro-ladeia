@@ -4,9 +4,9 @@ import { Award, ShieldCheck, Cpu, UserCheck } from 'lucide-react';
 export default function TrustMetrics() {
   const metrics = [
     {
-      number: '15+',
+      number: '+10',
       unit: 'Anos',
-      label: 'De Excelência Médica',
+      label: 'De Experiência Médica',
       description: 'Trajetória sólida e respeito construído na oftalmologia mineira.',
       icon: Award,
     },
@@ -28,7 +28,7 @@ export default function TrustMetrics() {
       number: '2 Polos',
       unit: 'Estratégicos',
       label: 'Nova Lima & Santa Luzia',
-      description: 'Atendimento privativo de alto padrão e clínica consolidada.',
+      description: 'Atendimento Individualizado e de alto padrão e clínica consolidada.',
       icon: ShieldCheck,
     },
   ];

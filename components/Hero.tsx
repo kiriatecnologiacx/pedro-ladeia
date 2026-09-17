@@ -41,7 +41,7 @@ export default function Hero() {
             {/* Top Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full glass-panel-navy border border-brand-beige/25 text-brand-beige text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-5 sm:mb-6 shadow-sm">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-beige animate-pulse"></span>
-              <span>ALTA OFTALMOLOGIA // NOVA LIMA & SANTA LUZIA</span>
+              <span>OFTALMOLOGIA DE EXCELÊNCIA // NOVA LIMA & SANTA LUZIA</span>
             </div>
 
             {/* Main Headline */}
@@ -53,10 +53,9 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="font-sans text-sm sm:text-base lg:text-lg text-brand-offwhite/80 leading-relaxed font-light mb-6 sm:mb-8 max-w-2xl">
-              Com mais de <strong className="text-white font-medium">15 anos de trajetória</strong> e 
-              uma sólida reputação na oftalmologia mineira, o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> une 
-              tecnologia cirúrgica de última geração, rigor científico e cuidado 
-              altamente individualizado em <span className="text-brand-beige font-medium">Nova Lima</span> e <span className="text-brand-beige font-medium">Santa Luzia</span>.
+              Com mais de <strong className="text-white font-medium">10 anos de trajetória</strong> e{' '}
+              uma sólida reputação na oftalmologia mineira, o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> une{' '}
+              tecnologia cirúrgica de última geração, rigor científico e cuidado altamente individualizado para promover a liberdade visual de seus pacientes.
             </p>
 
             {/* Specialty Badges */}
@@ -84,15 +83,15 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-navy-deep bg-brand-beige hover:bg-brand-beige-light shadow-xl transition-all duration-200 whitespace-nowrap group"
               >
                 <WhatsAppIcon className="w-4 h-4 text-brand-navy-deep shrink-0" />
-                <span className="whitespace-nowrap">Agendar Consulta Privativa</span>
+                <span className="whitespace-nowrap">Agendar Consulta</span>
                 <ArrowRight className="w-4 h-4 text-brand-navy-deep group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
 
               <a
-                href="#especialidades"
+                href="#protocolo"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-medium tracking-wide text-brand-offwhite/90 hover:text-white glass-panel-navy hover:bg-white/10 transition-colors whitespace-nowrap"
               >
-                <span>Conhecer Tratamentos</span>
+                <span>Conhecer Protocolo & Cirurgias</span>
                 <span className="text-brand-beige">↓</span>
               </a>
             </div>
@@ -106,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Clean Doctor Portrait (Resolved clutter & competition) */}
+          {/* Right Column: Clean Doctor Portrait */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end mt-4 lg:mt-0">
             {/* Outer Subtle Aura */}
             <div className="absolute w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-brand-beige/10 blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
@@ -116,7 +115,7 @@ export default function Hero() {
               <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-brand-navy-surface">
                 <Image
                   src="/dr_pedro_hero.jpg"
-                  alt="Dr. Pedro Henrique Ladeia Cruz - Especialista em Oftalmologia, Córnea e Catarata"
+                  alt="Dr. Pedro Henrique Ladeia Cruz - Oftalmologia de excelência, Córnea e Catarata"
                   fill
                   priority
                   className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
@@ -124,35 +123,28 @@ export default function Hero() {
                 />
 
                 {/* Subtle bottom gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/90 via-brand-navy-deep/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/95 via-brand-navy-deep/30 to-transparent" />
 
-                {/* Single Clean Bottom Caption (No competing floating boxes) */}
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 glass-panel-navy p-3 sm:p-3.5 rounded-xl border border-white/15 backdrop-blur-md">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h2 className="text-white font-serif text-sm sm:text-base font-semibold tracking-wide">
-                        Dr. Pedro Henrique Ladeia
-                      </h2>
-                      <p className="text-brand-beige text-[10px] sm:text-[11px] font-sans tracking-wider uppercase font-medium">
-                        Córnea, Catarata & Ceratocone
-                      </p>
-                    </div>
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-beige/15 border border-brand-beige/30 flex items-center justify-center text-brand-beige shrink-0">
-                      <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </div>
-                  </div>
+                {/* Embedded Doctor Quote Card */}
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 glass-panel-navy p-3 sm:p-3.5 rounded-xl border border-brand-beige/30 backdrop-blur-md">
+                  <p className="font-serif italic text-white/95 text-[11px] sm:text-xs leading-snug mb-1.5 uppercase">
+                    “MINHA MISSÃO É PROPORCIONAR SUA TÃO SONHADA LIBERDADE VISUAL ATRAVÉS DE CIRURGIAS ULTRA PERSONALIZADAS”
+                  </p>
+                  <p className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
+                    - Dr Pedro Ladeia
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Single Floating Badge on Top-Right (No bottom clutter) */}
+            {/* Single Floating Badge on Top-Right */}
             <div className="hidden sm:flex absolute -top-3 -right-3 glass-panel-navy px-3.5 py-2.5 rounded-2xl shadow-xl items-center gap-2.5 animate-float border border-brand-beige/30">
               <div className="w-8 h-8 rounded-lg bg-brand-beige/15 flex items-center justify-center text-brand-beige font-serif font-bold text-sm">
-                15+
+                +10
               </div>
               <div className="text-left">
                 <div className="text-[11px] font-bold text-white uppercase tracking-wider">
-                  Anos de Trajetória
+                  + de 10 Anos de Experiência
                 </div>
                 <div className="text-[10px] text-brand-offwhite/70">
                   Alta autoridade cirúrgica

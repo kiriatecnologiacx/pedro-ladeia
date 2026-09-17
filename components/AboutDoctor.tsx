@@ -2,128 +2,143 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Award, ShieldCheck, HeartPulse, GraduationCap, CheckCircle } from 'lucide-react';
+import { ArrowRight, Phone, Award, ShieldCheck, GraduationCap, Sparkles } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function AboutDoctor() {
+  const whatsappUrl =
+    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
+
   const credentials = [
     {
-      title: 'Especialista em Córnea e Catarata',
-      desc: 'Formação aprofundada com foco em procedimentos microcirúrgicos de alta complexidade.',
+      title: 'Especialista em Córnea & Catarata',
+      desc: 'Formação aprofundada em microcirurgia de alta complexidade.',
       icon: GraduationCap,
     },
     {
-      title: '15+ Anos de Atuação Cirúrgica',
-      desc: 'Mais de uma década e meia à frente de cirurgias de restauração visual e ectasias corneanas.',
+      title: '+ de 10 Anos de Experiência',
+      desc: 'Reconhecimento consistente em procedimentos de precisão e ectasias.',
       icon: Award,
     },
     {
-      title: 'Fundador da Clínica Consolidada em Santa Luzia',
-      desc: 'Liderança médica e reconhecimento regional na gestão e atendimento do PHD Olhos.',
+      title: '2 Polos de Atendimento',
+      desc: 'Atendimento Individualizado e de alto padrão no Vila da Serra e PHD Olhos.',
       icon: ShieldCheck,
-    },
-    {
-      title: 'Atendimento Privativo & Humanizado em Nova Lima',
-      desc: 'Consultas detalhadas, tempo dedicado a cada caso e planejamento cirúrgico sob medida.',
-      icon: HeartPulse,
     },
   ];
 
   return (
     <section id="sobre" className="py-20 sm:py-28 lg:py-32 bg-brand-navy-deep relative overflow-hidden">
-      {/* Subtle Background Elements */}
-      <div className="absolute -bottom-32 -left-32 w-80 sm:w-96 h-80 sm:h-96 bg-brand-navy/60 rounded-full blur-3xl pointer-events-none" />
+      {/* Background Subtle Ambience */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-20 w-80 sm:w-96 h-80 sm:h-96 bg-brand-navy/60 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-brand-beige/5 rounded-full blur-3xl" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left Column: Doctor Photo Frame */}
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Doctor Photo Card */}
           <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden glass-panel-navy p-2 shadow-2xl border border-brand-beige/25">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-brand-navy-surface">
+            <div className="relative w-full max-w-[320px] sm:max-w-[380px] rounded-3xl overflow-hidden glass-panel-navy p-2 shadow-2xl border border-brand-beige/25">
+              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-brand-navy-surface">
                 <Image
                   src="/dr_pedro_about.jpg"
-                  alt="Dr. Pedro Henrique Ladeia Cruz no consultório"
+                  alt="Dr. Pedro Henrique Ladeia Cruz"
                   fill
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 420px"
+                  sizes="(max-width: 768px) 100vw, 380px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/95 via-brand-navy-deep/20 to-transparent" />
-                
-                {/* Embedded Quote */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
-                  <p className="font-serif italic text-white/95 text-xs sm:text-sm leading-snug mb-2">
-                    “A visão é o sentido mais precioso do ser humano. Cuidar dela exige rigor científico inegociável e sensibilidade médica profunda.”
-                  </p>
-                  <p className="text-[10px] sm:text-[11px] font-sans uppercase tracking-widest text-brand-beige font-semibold">
-                    — Dr. Pedro Henrique Ladeia Cruz
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-deep/95 via-brand-navy-deep/25 to-transparent" />
+
+                {/* Compact Doctor Signature */}
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 glass-panel-navy p-3 rounded-xl border border-brand-beige/25 backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-white font-serif text-sm sm:text-base font-semibold tracking-wide">
+                        Dr. Pedro Henrique Ladeia
+                      </h4>
+                      <p className="text-brand-beige text-[10px] sm:text-[11px] font-sans tracking-wider uppercase font-medium">
+                        Oftalmologista · CRM-MG
+                      </p>
+                    </div>
+                    <div className="w-7 h-7 rounded-full bg-brand-beige/15 border border-brand-beige/30 flex items-center justify-center text-brand-beige shrink-0">
+                      <Sparkles className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Decorative Beige Accent Frame */}
-            <div className="hidden sm:block absolute -bottom-3 -right-3 w-28 h-28 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
+            {/* Decorative Accent Border */}
+            <div className="hidden sm:block absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-brand-beige/30 rounded-br-3xl pointer-events-none -z-10" />
           </div>
 
-          {/* Right Column: Editorial Narrative & Authority */}
+          {/* Right Column: Unified Conversion & Authority Proposition */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
-              <span>✦ TRAJETÓRIA MÉDICA & AUTORIDADE</span>
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3 sm:mb-4">
+              <span>✦ ATENDIMENTO INDIVIDUALIZADO E DE ALTO PADRÃO</span>
             </div>
 
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-tight mb-5 sm:mb-6">
-              Mais de 15 anos construindo confiança e excelência na oftalmologia mineira.
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-tight mb-4 sm:mb-5">
+              Sua visão é única. O seu tratamento oftalmológico também deve ser.
             </h2>
 
-            <div className="space-y-3.5 sm:space-y-4 text-xs sm:text-sm lg:text-base text-brand-offwhite/80 font-light leading-relaxed mb-6 sm:mb-8">
-              <p>
-                O <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> construiu 
-                uma trajetória sólida ao longo de mais de 15 anos dedicados à oftalmologia de excelência, 
-                tornando-se uma das principais referências cirúrgicas de Minas Gerais. Em Santa Luzia, 
-                consolidou uma clínica de destaque reconhecida pelo alto índice de fidelização de seus 
-                pacientes e pela segurança consistente em procedimentos de alta complexidade.
-              </p>
-              <p>
-                Sua atuação clínica e cirúrgica é fundamentada no domínio aprofundado em <strong className="text-brand-beige font-medium">Córnea, Catarata e Ceratocone</strong>. 
-                Com o objetivo de oferecer um atendimento ainda mais exclusivo e sofisticado, expande sua 
-                presença para <strong className="text-white font-medium">Nova Lima</strong>, trazendo aos pacientes 
-                da região um modelo de consulta privativa, com tempo dedicado, diagnóstico computadorizado 
-                e tecnologia cirúrgica de ponta.
-              </p>
-            </div>
+            <p className="text-xs sm:text-sm lg:text-base text-brand-offwhite/85 font-light leading-relaxed mb-6 sm:mb-8">
+              Com <strong className="text-white font-medium">+ de 10 anos de experiência</strong> e{' '}
+              uma sólida reputação em Minas Gerais, o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> une{' '}
+              diagnósticos avançados, tecnologia microcirúrgica de ponta e um plano personalizado desenhado com rigor absoluto para a sua liberdade visual.
+            </p>
 
-            {/* Credential Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full mb-6 sm:mb-8">
+            {/* Compact Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mb-7 sm:mb-9">
               {credentials.map((c, idx) => {
                 const Icon = c.icon;
                 return (
                   <div
                     key={idx}
-                    className="glass-panel-navy p-3.5 sm:p-4 rounded-2xl border border-white/10 flex items-start gap-3 hover:border-brand-beige/30 transition-colors"
+                    className="glass-panel-navy p-3.5 rounded-2xl border border-white/10 hover:border-brand-beige/30 transition-colors"
                   >
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mt-0.5">
-                      <Icon className="w-4 h-4" />
+                    <div className="w-7 h-7 rounded-lg bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0 mb-2">
+                      <Icon className="w-3.5 h-3.5" />
                     </div>
-                    <div>
-                      <h4 className="text-[11px] sm:text-xs font-semibold text-white uppercase tracking-wider mb-1">
-                        {c.title}
-                      </h4>
-                      <p className="text-[11px] sm:text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                        {c.desc}
-                      </p>
-                    </div>
+                    <h5 className="text-[11px] font-semibold text-white uppercase tracking-wider mb-1">
+                      {c.title}
+                    </h5>
+                    <p className="text-[10px] sm:text-[11px] text-brand-offwhite/65 font-light leading-snug">
+                      {c.desc}
+                    </p>
                   </div>
                 );
               })}
             </div>
 
-            {/* Commitment Highlight */}
-            <div className="w-full glass-panel-navy p-4 rounded-2xl border border-brand-beige/30 flex items-center gap-3.5">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-brand-beige/15 flex items-center justify-center text-brand-beige shrink-0">
-                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-              </div>
-              <p className="text-xs sm:text-sm text-brand-offwhite/90 font-light">
-                <strong className="text-white font-medium">Compromisso Ético & Científico:</strong> Cada indicação cirúrgica é estritamente personalizada, priorizando a segurança e a longevidade visual de cada paciente.
-              </p>
+            {/* Direct Actions */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-navy-deep bg-brand-beige hover:bg-brand-beige-light shadow-xl transition-all duration-200 whitespace-nowrap group"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-brand-navy-deep shrink-0" />
+                <span className="whitespace-nowrap">Agendar Consulta Agora</span>
+                <ArrowRight className="w-4 h-4 text-brand-navy-deep group-hover:translate-x-1 transition-transform shrink-0" />
+              </a>
+
+              <a
+                href="tel:+5531998972000"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-medium tracking-wide text-brand-offwhite glass-panel-navy hover:bg-white/10 transition-colors whitespace-nowrap"
+              >
+                <Phone className="w-4 h-4 text-brand-beige shrink-0" />
+                <span>(31) 99897-2000</span>
+              </a>
+            </div>
+
+            {/* Credential Tags */}
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-white/10 text-[11px] text-brand-offwhite/60">
+              <span>✦ Atendimento: Nova Lima & Santa Luzia</span>
+              <span>✦ Especialista em Córnea, Catarata e Ceratocone</span>
+              <span>✦ CRM-MG</span>
             </div>
           </div>
         </div>
