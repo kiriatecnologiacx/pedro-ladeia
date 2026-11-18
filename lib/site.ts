@@ -4,7 +4,7 @@ export const CRM = 'CRM-MG 48344';
 export const RQE = 'RQE 40934';
 export const CREDENTIALS = `${CRM} · ${RQE}`;
 
-/** Monta link do WhatsApp; toda mensagem leva "vim pelo site" para rastreio na planilha. */
+/** Monta link do WhatsApp; toda mensagem começa com "Oi, vim pelo site!" para rastreio na planilha. */
 export function wa(message: string): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`${message} (vim pelo site)`)}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Oi, vim pelo site! ${message}`)}`;
 }
