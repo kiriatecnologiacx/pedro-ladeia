@@ -26,9 +26,9 @@ export default function TrustMetrics() {
     },
     {
       number: 'Nova Lima',
-      unit: 'MG',
+      unit: 'e BH',
       label: 'Vila da Serra & Belvedere',
-      description: 'Atendimento em duas regiões de fácil acesso.',
+      description: 'Atendimento em Vila da Serra e em Belvedere.',
       icon: MapPin,
     },
   ];

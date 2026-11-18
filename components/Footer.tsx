@@ -23,7 +23,7 @@ export default function Footer() {
                 Oftalmologista · Córnea & Catarata
               </p>
               <p className="text-xs sm:text-sm text-brand-offwhite/60 font-light leading-relaxed max-w-sm mb-6">
-                Mais de 10 anos de experiência em córnea e catarata. Atendimento em Vila da Serra e Belvedere, Nova Lima.
+                Mais de 10 anos de experiência em córnea e catarata. Atendimento em Vila da Serra (Nova Lima) e Belvedere (Belo Horizonte).
               </p>
             </div>
 
@@ -124,12 +124,11 @@ export default function Footer() {
             </h4>
             <div className="space-y-3.5 text-xs">
               <div>
-                <p className="font-semibold text-white">Vila da Serra</p>
+                <p className="font-semibold text-white">Vila da Serra — Nova Lima, MG</p>
               </div>
               <div>
-                <p className="font-semibold text-white">Belvedere</p>
+                <p className="font-semibold text-white">Belvedere — Belo Horizonte, MG</p>
               </div>
-              <p className="text-brand-offwhite/50 text-[11px]">Nova Lima — MG</p>
               <div className="pt-2 border-t border-white/5">
                 <a
                   href={whatsappUrl}

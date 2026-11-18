@@ -99,7 +99,7 @@ export default function Hero() {
             <div className="flex items-center gap-4 sm:gap-6 mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-white/10 text-[11px] sm:text-xs text-brand-offwhite/60">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-beige shrink-0" />
-                <span>Atendimento em <strong>Vila da Serra</strong> e <strong>Belvedere</strong> · Nova Lima</span>
+                <span>Atendimento em <strong>Vila da Serra</strong> (Nova Lima) e <strong>Belvedere</strong> (Belo Horizonte)</span>
               </div>
             </div>
           </div>

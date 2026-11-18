@@ -27,7 +27,7 @@ export default function FAQ() {
     },
     {
       q: 'Onde são as consultas?',
-      a: 'O Dr. Pedro atende em Vila da Serra e em Belvedere, na região de Nova Lima. Ao agendar pelo WhatsApp, a equipe informa o endereço e os horários disponíveis.',
+      a: 'O Dr. Pedro atende em Vila da Serra (Nova Lima) e no Belvedere (Belo Horizonte). Para mais informações e horários, é só chamar a equipe pelo WhatsApp.',
     },
   ];
 

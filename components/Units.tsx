@@ -22,7 +22,7 @@ export default function Units() {
     },
     {
       name: 'Belvedere',
-      badge: 'Nova Lima — MG',
+      badge: 'Belo Horizonte — MG',
       region: 'Atendimento com hora marcada',
       description:
         'Mais uma opção de local para você ser avaliado(a) pelo Dr. Pedro, com a mesma conversa individual e o mesmo cuidado em cada consulta.',
@@ -88,7 +88,7 @@ export default function Units() {
                   <div className="space-y-2.5 py-4 border-y border-brand-beige/50 text-xs text-brand-charcoal mb-6">
                     <div className="flex items-start gap-2.5">
                       <MapPin className="w-4 h-4 text-brand-beige-dark shrink-0 mt-0.5" />
-                      <span>{unit.name}, Nova Lima — MG · endereço enviado ao agendar</span>
+                      <span>{unit.badge}</span>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Phone className="w-4 h-4 text-brand-beige-dark shrink-0" />
