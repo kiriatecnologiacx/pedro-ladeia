@@ -4,10 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, Phone, ShieldCheck, Sparkles } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa, PHONE_DISPLAY, CREDENTIALS } from '@/lib/site';
 
 export default function AboutDoctor() {
-  const whatsappUrl =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
+  const whatsappUrl = wa('Olá, gostaria de saber se posso operar para enxergar sem óculos com o Dr. Pedro Ladeia.');
 
   return (
     <section id="sobre" className="py-20 sm:py-28 lg:py-32 bg-brand-navy-deep relative overflow-hidden">
@@ -40,7 +40,7 @@ export default function AboutDoctor() {
                         Dr. Pedro Henrique Ladeia
                       </h4>
                       <p className="text-brand-beige text-[10px] sm:text-[11px] font-sans tracking-wider uppercase font-medium">
-                        Oftalmologista · CRM-MG
+                        Oftalmologista · CRM-MG 48344
                       </p>
                     </div>
                     <div className="w-7 h-7 rounded-full bg-brand-beige/15 border border-brand-beige/30 flex items-center justify-center text-brand-beige shrink-0">
@@ -59,17 +59,29 @@ export default function AboutDoctor() {
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3 sm:mb-4">
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-beige" />
-              <span>✦ TRANSFORME A SUA QUALIDADE DE VIDA VISUAL</span>
+              <span>✦ SOBRE O MÉDICO</span>
             </div>
 
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-white font-normal leading-tight mb-4 sm:mb-6">
-              Sua visão é única. O seu tratamento oftalmológico também deve ser.
+              Um médico que ensina, e que escuta antes de operar.
             </h2>
 
-            <p className="text-xs sm:text-base lg:text-lg text-brand-offwhite/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl">
-              Agende uma consulta com o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> e{' '}
-              tenha acesso a uma avaliação oftalmológica completa, tecnologia de ponta e um plano cirúrgico desenhado com precisão para os seus olhos.
-            </p>
+            <div className="space-y-4 text-xs sm:text-base text-brand-offwhite/85 font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+              <p>
+                <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> é oftalmologista
+                especialista em córnea e catarata e atua como <strong className="text-white font-medium">preceptor</strong>:
+                além de operar, ele ensina e acompanha a formação de outros médicos. Para ele, quem ensina precisa explicar
+                cada decisão com clareza, e é assim que ele conversa também com cada paciente.
+              </p>
+              <p>
+                A primeira consulta é uma conversa: ele quer entender a sua rotina, o que
+                incomoda nos óculos e o que você espera de uma cirurgia.
+              </p>
+              <p>
+                Mais de 10 anos de experiência depois, a regra continua a mesma: cada olho é diferente, e a indicação
+                é sempre individual.
+              </p>
+            </div>
 
             {/* Direct Actions */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
@@ -80,7 +92,7 @@ export default function AboutDoctor() {
                 className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-navy-deep bg-brand-beige hover:bg-brand-beige-light shadow-xl transition-all duration-200 whitespace-nowrap group"
               >
                 <WhatsAppIcon className="w-4 h-4 text-brand-navy-deep shrink-0" />
-                <span className="whitespace-nowrap">Agendar Consulta Agora</span>
+                <span className="whitespace-nowrap">Descubra se você pode operar</span>
                 <ArrowRight className="w-4 h-4 text-brand-navy-deep group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
 
@@ -89,15 +101,15 @@ export default function AboutDoctor() {
                 className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-medium tracking-wide text-brand-offwhite glass-panel-navy hover:bg-white/10 transition-colors whitespace-nowrap"
               >
                 <Phone className="w-4 h-4 text-brand-beige shrink-0" />
-                <span>(31) 99897-2000</span>
+                <span>{PHONE_DISPLAY}</span>
               </a>
             </div>
 
             {/* Credential Tags */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-white/10 text-[11px] sm:text-xs text-brand-offwhite/60">
-              <span>✦ Atendimento: Nova Lima & Santa Luzia</span>
-              <span>✦ Especialista em Córnea, Catarata e Ceratocone</span>
-              <span>✦ CRM-MG</span>
+              <span>✦ Vila da Serra & Belvedere</span>
+              <span>✦ Córnea e Catarata</span>
+              <span>✦ {CREDENTIALS}</span>
             </div>
           </div>
         </div>

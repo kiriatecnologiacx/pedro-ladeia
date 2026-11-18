@@ -1,10 +1,10 @@
 import React from 'react';
 import { ArrowUpRight, Instagram } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa, CREDENTIALS } from '@/lib/site';
 
 export default function Footer() {
-  const whatsappUrl =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20do%20Dr.%20Pedro%20Ladeia.';
+  const whatsappUrl = wa('Olá, gostaria de informações sobre as consultas do Dr. Pedro Ladeia.');
 
   return (
     <footer className="bg-brand-navy-deep border-t border-brand-beige/15 pt-16 sm:pt-20 pb-10 sm:pb-12 text-brand-offwhite/70">
@@ -20,10 +20,10 @@ export default function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
               </div>
               <p className="text-[10px] sm:text-[11px] font-sans tracking-[0.22em] text-brand-beige uppercase font-medium mb-4 sm:mb-6">
-                Oftalmologia de excelência · Córnea & Catarata
+                Oftalmologista · Córnea & Catarata
               </p>
               <p className="text-xs sm:text-sm text-brand-offwhite/60 font-light leading-relaxed max-w-sm mb-6">
-                + de 10 anos de experiência dedicados à excelência cirúrgica, restauração visual e segurança oftalmológica em Minas Gerais.
+                Mais de 10 anos de experiência em córnea e catarata. Atendimento em Vila da Serra e Belvedere, Nova Lima.
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Cirurgias Premium
+                  Cirurgias
                 </a>
               </li>
               <li>
@@ -91,27 +91,27 @@ export default function Footer() {
             <ul className="space-y-2.5 sm:space-y-3 text-xs">
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Catarata & Lentes Premium
+                  Catarata e lentes premium
                 </a>
               </li>
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Tratamento de Ceratocone
+                  Tratamento de ceratocone
                 </a>
               </li>
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Anel Intrastromal
+                  Anel na córnea (ceratocone)
                 </a>
               </li>
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Cirurgia Refrativa Laser
+                  Cirurgia para grau (laser)
                 </a>
               </li>
               <li>
                 <a href="#cirurgias" className="hover:text-brand-beige transition-colors">
-                  Exames & Biometria Óptica
+                  Exames do olho
                 </a>
               </li>
             </ul>
@@ -124,13 +124,12 @@ export default function Footer() {
             </h4>
             <div className="space-y-3.5 text-xs">
               <div>
-                <p className="font-semibold text-white">Nova Lima — MG</p>
-                <p className="text-brand-offwhite/50 text-[11px]">Vila da Serra · Atendimento Individualizado e de alto padrão</p>
+                <p className="font-semibold text-white">Vila da Serra</p>
               </div>
               <div>
-                <p className="font-semibold text-white">Santa Luzia — MG</p>
-                <p className="text-brand-offwhite/50 text-[11px]">Rua Santa Luzia, 292 — Centro</p>
+                <p className="font-semibold text-white">Belvedere</p>
               </div>
+              <p className="text-brand-offwhite/50 text-[11px]">Nova Lima — MG</p>
               <div className="pt-2 border-t border-white/5">
                 <a
                   href={whatsappUrl}
@@ -150,9 +149,14 @@ export default function Footer() {
         {/* Bottom Credits & Legal */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-brand-offwhite/40 text-center sm:text-left">
           <p>
-            Dr. Pedro Henrique Ladeia Cruz · Especialista em Córnea e Catarata · CRM-MG
+            Dr. Pedro Henrique Ladeia Cruz · Oftalmologista · {CREDENTIALS}
           </p>
-          <p>© {new Date().getFullYear()} Dr. Pedro Ladeia. Todos os direitos reservados.</p>
+          <p>
+            <a href="/privacidade" className="hover:text-brand-beige transition-colors underline underline-offset-2">
+              Política de Privacidade
+            </a>{' '}
+            · © {new Date().getFullYear()} Dr. Pedro Ladeia
+          </p>
         </div>
       </div>
     </footer>

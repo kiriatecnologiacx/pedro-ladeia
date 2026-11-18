@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, Sparkles, Eye, Shield, Layers, ChevronDown, ChevronUp } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa } from '@/lib/site';
 
 export default function Services() {
   const [expandedCards, setExpandedCards] = useState<{ [key: number]: boolean }>({});
@@ -15,73 +16,70 @@ export default function Services() {
     }));
   };
 
-  const whatsappBase =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20';
-
   const services = [
     {
       number: '01',
-      title: 'Cirurgia de Catarata & Lentes Premium',
-      category: 'Restauração Visual',
+      title: 'Catarata e lentes premium',
+      category: 'Visão nítida',
       shortDesc:
-        'Procedimento microcirúrgico a laser, com implante de lentes intraoculares para recuperação da visão nítida e máxima independência dos óculos.',
+        'Cirurgia que troca o cristalino embaçado por uma lente nova, podendo reduzir a dependência dos óculos.',
       fullDesc:
-        'Procedimento microcirúrgico a laser, com implante de lentes intraoculares de última geração (multifocais, trifocais e tóricas). Permite recuperar a visão nítida em todas as distâncias com máxima independência dos óculos.',
+        'O cristalino, que é a lente natural do olho, fica embaçado com o tempo (catarata). Na cirurgia, ele é trocado por uma lente artificial. Há lentes que ajudam a enxergar de longe e de perto, e lentes que também corrigem o astigmatismo. A escolha depende do seu olho e da sua rotina.',
       features: [
-        'Cálculo biométrico de alta precisão a laser',
-        'Lentes tóricas para correção de astigmatismo',
-        'Recuperação rápida e minimamente invasiva',
+        'Medidas do olho para escolher a lente certa',
+        'Opções de lente que corrigem o astigmatismo',
+        'Cirurgia por pequena incisão, com acompanhamento',
       ],
       icon: Eye,
-      tag: 'Catarata Premium',
+      tag: 'Catarata',
     },
     {
       number: '02',
-      title: 'Tratamento Avançado de Ceratocone',
-      category: 'Especialidade em Córnea',
+      title: 'Tratamento do ceratocone',
+      category: 'Córnea',
       shortDesc:
-        'Abordagem personalizada com Crosslinking para estabilização da córnea, Implante de Anel Intrastromal (Ferrara) e adaptação de lentes esclerais de alta performance.',
+        'Tratamentos que ajudam a firmar a córnea e a melhorar a visão de quem tem ceratocone, conforme o estágio de cada caso.',
       fullDesc:
-        'Abordagem personalizada com Crosslinking para estabilização da córnea, Implante de Anel Intrastromal (Ferrara) e adaptação de lentes esclerais de alta performance.',
+        'No ceratocone a córnea vai ficando mais fina e inclinada. Dependendo do caso, o tratamento pode incluir um procedimento para firmar a córnea (crosslinking), pequenos anéis que ajudam a regularizar o formato dela e lentes de contato especiais feitas sob medida.',
       features: [
-        'Crosslinking do colágeno corneano',
-        'Implante de anel intraestromal a laser',
-        'Lentes de contato esclerais sob medida',
+        'Procedimento para firmar a córnea (crosslinking)',
+        'Anéis que regularizam o formato da córnea',
+        'Lentes de contato especiais sob medida',
       ],
       icon: Sparkles,
-      tag: 'Córnea & Ceratocone',
+      tag: 'Ceratocone',
     },
     {
       number: '03',
-      title: 'Cirurgia Refrativa Personalizada a Laser',
-      category: 'Liberdade sem Óculos',
+      title: 'Cirurgia a laser para o grau',
+      category: 'Sem óculos',
       shortDesc:
-        'Correção personalizada de Miopia, Astigmatismo e Hipermetropia com tecnologias guiadas por topografia (Femto-LASIK e PRK).',
+        'Laser que corrige miopia, astigmatismo e hipermetropia, para quem quer enxergar sem depender dos óculos.',
       fullDesc:
-        'Correção precisa de Miopia, Hipermetropia e Astigmatismo através de tecnologias a laser guiadas por aberrometria (Femto-LASIK e PRK). Planejamento centrado na curvatura e espessura única dos seus olhos.',
+        'O laser remodela a superfície da córnea para corrigir o grau. As técnicas mais usadas são o LASIK e o PRK. Antes, medimos a curvatura e a espessura da sua córnea para saber se você pode fazer e qual técnica é a mais indicada.',
       features: [
-        'LASIK e PRK personalizados a laser',
-        'Correção de aberrações de alta ordem',
-        'Retorno ágil às atividades diárias',
+        'Técnicas LASIK e PRK, escolhidas para o seu caso',
+        'Avaliação da córnea antes de indicar',
+        'Orientação sobre o retorno às atividades',
       ],
       icon: Layers,
-      tag: 'Refrativa a Laser',
+      tag: 'Laser',
     },
     {
       number: '04',
-      title: 'Exames Diagnósticos de Alta Complexidade',
-      category: 'Medicina de Precisão',
+      title: 'Exames do olho',
+      category: 'Diagnóstico',
       shortDesc:
-        'Avaliação minuciosa com tomografia de córnea (Pentacam), mapeamento de retina e biometria óptica para segurança cirúrgica total.',
+        'Exames que mostram a córnea, a retina e as medidas do olho, para planejar a cirurgia com segurança.',
       fullDesc:
-        'Bateria diagnóstica com equipamentos oftalmológicos modernos para avaliação detalhada de Córnea, Retina, Nervo Óptico e Glaucoma. Laudos precisos para condução clínica e planejamento cirúrgico seguro.',
+        'Fazemos exames indolores que fotografam e medem o seu olho por dentro e por fora. Eles ajudam a descobrir doenças e a planejar a cirurgia, quando ela é indicada.',
       features: [
-        'Tomografia e Topografia de Córnea (Pentacam)',
-        'Biometria óptica computadorizada',
-        'Mapeamento de retina e tonometria',
+        'Mapa da córnea (tomografia e topografia)',
+        'Medida do olho para calcular a lente',
+        'Exame da retina e medida da pressão do olho',
       ],
       icon: Shield,
-      tag: 'Diagnóstico Avançado',
+      tag: 'Exames',
     },
   ];
 
@@ -95,14 +93,14 @@ export default function Services() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 sm:mb-16 gap-5">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
-              <span>✦ ÁREAS DE ATUAÇÃO & CIRURGIAS</span>
+              <span>✦ CIRURGIAS E TRATAMENTOS</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-brand-black font-normal leading-tight">
-              Excelência técnica para cada detalhe da sua visão.
+              Entenda cada procedimento em linguagem simples.
             </h2>
           </div>
           <p className="font-sans text-xs sm:text-sm text-brand-charcoal/80 max-w-md font-light leading-relaxed">
-            Abordagem cirúrgica refinada que alia diagnósticos ultramodernos ao respeito absoluto pela singularidade de cada paciente.
+            Toda indicação é individual: só depois de avaliar o seu olho o Dr. Pedro diz o que faz sentido para você.
           </p>
         </div>
 
@@ -112,7 +110,7 @@ export default function Services() {
             <div className="lg:col-span-7 relative h-60 sm:h-80 lg:h-96 w-full overflow-hidden">
               <Image
                 src="/clinic_laser_tech.jpg"
-                alt="Tecnologia cirúrgica oftalmológica avançada"
+                alt="Equipamento de exames oftalmológicos"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 60vw"
@@ -122,29 +120,29 @@ export default function Services() {
 
             <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-semibold tracking-widest text-brand-beige-dark uppercase mb-2 sm:mb-3">
-                <span>✦ AMBIENTE CIRÚRGICO & DIAGNÓSTICO</span>
+                <span>✦ EXAMES E PLANEJAMENTO</span>
               </div>
               <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-black font-normal mb-3 sm:mb-4">
-                Infraestrutura de padrão internacional em Nova Lima e Santa Luzia.
+                Exames que ajudam a planejar a sua cirurgia.
               </h3>
               <p className="text-xs sm:text-sm text-brand-charcoal/80 font-light leading-relaxed mb-4 sm:mb-6">
-                Equipamentos de tomografia de córnea, microscopia de alta resolução e lasers cirúrgicos de precisão micrométrica proporcionam máxima segurança antes, durante e após o seu procedimento.
+                Antes de qualquer indicação, medimos e mapeamos o seu olho. É com esses dados que o Dr. Pedro escolhe, junto com você, o melhor caminho.
               </p>
               <div className="flex items-center gap-2 text-[11px] sm:text-xs text-brand-black font-medium uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-beige-dark shrink-0" />
-                <span>Rigor técnico validado por + de 10 anos de experiência cirúrgica</span>
+                <span>Mais de 10 anos de experiência em córnea e catarata</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Compact Services Grid with Expandable "Saiba Mais" */}
-        <div id="cirurgias" className="grid md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
           {services.map((srv, index) => {
             const isExpanded = !!expandedCards[index];
-            const queryUrl = `${whatsappBase}${encodeURIComponent(
-              srv.title
-            )}%20com%20o%20Dr.%20Pedro%20Ladeia.`;
+            const queryUrl = wa(
+              `Olá, gostaria de informações sobre ${srv.title.toLowerCase()} com o Dr. Pedro Ladeia.`
+            );
 
             return (
               <div
@@ -181,7 +179,7 @@ export default function Services() {
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-beige-dark hover:text-brand-black mb-4 transition-colors focus:outline-none"
                     aria-expanded={isExpanded}
                   >
-                    <span>{isExpanded ? 'Ocultar detalhes' : 'Saiba mais sobre o procedimento'}</span>
+                    <span>{isExpanded ? 'Ocultar detalhes' : 'Saiba mais'}</span>
                     {isExpanded ? (
                       <ChevronUp className="w-3.5 h-3.5" />
                     ) : (
@@ -219,7 +217,7 @@ export default function Services() {
                 >
                   <span className="inline-flex items-center gap-2 truncate">
                     <WhatsAppIcon className="w-3.5 h-3.5 text-brand-black shrink-0" />
-                    <span className="truncate">Agendar Avaliação</span>
+                    <span className="truncate">Quero minha avaliação</span>
                   </span>
                   <ArrowUpRight className="w-4 h-4 text-brand-black group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform shrink-0 ml-2" />
                 </a>

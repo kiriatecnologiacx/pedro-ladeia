@@ -3,26 +3,31 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, MessageSquare } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa } from '@/lib/site';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      q: 'Como a cirurgia de catarata com lentes premium pode me livrar dos óculos?',
-      a: 'A cirurgia moderna de catarata substitui o cristalino opaco por uma lente intraocular artificial altamente avançada. As lentes trifocais e de foco estendido corrigem a visão para perto, meia distância e longe simultaneamente. Pacientes com astigmatismo utilizam lentes tóricas personalizadas, permitindo excelente independência dos óculos na maioria das atividades do cotidiano.',
+      q: 'Eu posso operar para ficar sem óculos?',
+      a: 'Depende do seu olho. Para saber, é preciso uma avaliação: medimos o grau, mapeamos a córnea e conversamos sobre a sua rotina. Existem opções diferentes, como cirurgia de catarata com lente premium ou laser para o grau, e só depois da consulta o Dr. Pedro diz qual faz sentido para você, ou se ainda não é o momento.',
     },
     {
-      q: 'Tenho ceratocone. Quais são as melhores abordagens de tratamento?',
-      a: 'O tratamento do ceratocone depende do estágio da ectasia. Nos estágios iniciais e em progressão, o Crosslinking do Colágeno Corneano estabiliza a estrutura da córnea. Para regularizar a curvatura e melhorar a visão, o implante de Anel Intraestromal (como o Anel de Ferrara) é altamente eficaz. Além disso, dispomos de adaptação precisa de lentes de contato esclerais sob medida.',
+      q: 'A cirurgia dói?',
+      a: 'A cirurgia é feita com anestesia em colírio, e em muitos casos com sedação leve, então a maioria das pessoas relata sentir pressão e luz, mas não dor. Nas horas seguintes pode haver desconforto leve, sensação de areia ou lacrimejamento, que o Dr. Pedro orienta a tratar com colírios. Cada pessoa reage de um jeito, e você é avisado de tudo antes.',
     },
     {
-      q: 'A cirurgia refrativa a laser dói? Qual é o tempo de recuperação?',
-      a: 'O procedimento é indolor, realizado sob anestesia tópica com colírios específicos. O laser age em poucos segundos por olho. Na técnica LASIK, a recuperação visual é notada logo nas primeiras 24 horas. Na técnica PRK, a visão se estabiliza gradualmente ao longo dos primeiros dias, sempre com acompanhamento minucioso.',
+      q: 'Quanto tempo leva a recuperação?',
+      a: 'Varia com o tipo de cirurgia. Na catarata, muita gente volta às atividades leves em poucos dias, seguindo as orientações de colírio e cuidados. No laser, a recuperação costuma ser rápida com a técnica LASIK e um pouco mais gradual com a PRK. O Dr. Pedro explica o seu prazo na consulta e você faz retornos para acompanhar tudo.',
     },
     {
-      q: 'Qual é a diferença entre as consultas em Nova Lima e em Santa Luzia?',
-      a: 'Ambas as unidades contam com a condução médica e o rigor técnico do Dr. Pedro Ladeia. A unidade de Nova Lima foi estruturada para proporcionar Atendimento Individualizado e de alto padrão no polo do Vila da Serra, enquanto a unidade de Santa Luzia (PHD Olhos) conta com nossa infraestrutura consolidada de exames e atendimento regional.',
+      q: 'Tenho ceratocone. Tem tratamento?',
+      a: 'Sim. O tratamento depende do estágio do ceratocone. Pode envolver um procedimento para firmar a córnea (crosslinking), pequenos anéis que regularizam o formato dela e lentes de contato especiais sob medida. Só a avaliação mostra o que se aplica ao seu caso.',
+    },
+    {
+      q: 'Onde são as consultas?',
+      a: 'O Dr. Pedro atende em Vila da Serra e em Belvedere, na região de Nova Lima. Ao agendar pelo WhatsApp, a equipe informa o endereço e os horários disponíveis.',
     },
   ];
 
@@ -39,13 +44,13 @@ export default function FAQ() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-beige uppercase mb-3">
             <HelpCircle className="w-3.5 h-3.5 text-brand-beige" />
-            <span>ESCLARECIMENTOS & DÚVIDAS FREQUENTES</span>
+            <span>DÚVIDAS FREQUENTES</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal leading-tight mb-4">
-            Perguntas frequentes sobre tratamentos e procedimentos.
+            O que as pacientes mais perguntam antes de operar.
           </h2>
           <p className="text-sm text-brand-offwhite/75 font-light max-w-xl mx-auto">
-            Transparência e segurança são valores fundamentais no cuidado com a sua saúde ocular.
+            Respostas simples. Para o seu caso, só a avaliação individual responde.
           </p>
         </div>
 
@@ -94,12 +99,12 @@ export default function FAQ() {
                 Ficou com alguma dúvida sobre o seu caso específico?
               </p>
               <p className="text-xs text-brand-offwhite/70">
-                Nossa equipe está à disposição para orientá-lo diretamente pelo WhatsApp.
+                Nossa equipe orienta você diretamente pelo WhatsApp.
               </p>
             </div>
           </div>
           <a
-            href="https://wa.me/5531998972000?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20espec%C3%ADfica%20para%20o%20Dr.%20Pedro%20Ladeia."
+            href={wa('Olá, tenho uma dúvida específica para o Dr. Pedro Ladeia.')}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-beige text-brand-navy-deep text-xs font-semibold uppercase tracking-wider hover:bg-brand-beige-light transition-colors shrink-0 whitespace-nowrap shadow-md"

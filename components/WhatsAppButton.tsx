@@ -2,10 +2,10 @@
 
 import React from 'react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa } from '@/lib/site';
 
 export default function WhatsAppButton() {
-  const whatsappUrl =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
+  const whatsappUrl = wa('Olá, gostaria de agendar uma consulta com o Dr. Pedro Ladeia.');
 
   return (
     <aside

@@ -11,10 +11,10 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa } from '@/lib/site';
 
 export default function Hero() {
-  const whatsappUrl =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
+  const whatsappUrl = wa('Olá, gostaria de saber se posso operar para enxergar sem óculos com o Dr. Pedro Ladeia.');
 
   return (
     <section className="relative min-h-[90vh] pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-navy-deep flex items-center">
@@ -41,21 +41,20 @@ export default function Hero() {
             {/* Top Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full glass-panel-navy border border-brand-beige/25 text-brand-beige text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-5 sm:mb-6 shadow-sm">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-beige animate-pulse"></span>
-              <span>OFTALMOLOGIA DE EXCELÊNCIA // NOVA LIMA & SANTA LUZIA</span>
+              <span>OFTALMOLOGIA · VILA DA SERRA & BELVEDERE</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] sm:leading-[1.15] tracking-tight mb-5 sm:mb-6">
-              A precisão cirúrgica que sua{' '}
-              <span className="italic text-brand-beige font-serif">visão</span>{' '}
-              merece. A autoridade médica em que você confia.
+              Cirurgia para{' '}
+              <span className="italic text-brand-beige font-serif">enxergar sem óculos</span>,{' '}
+              planejada para a sua rotina.
             </h1>
 
             {/* Subtitle */}
             <p className="font-sans text-sm sm:text-base lg:text-lg text-brand-offwhite/80 leading-relaxed font-light mb-6 sm:mb-8 max-w-2xl">
-              Com mais de <strong className="text-white font-medium">10 anos de trajetória</strong> e{' '}
-              uma sólida reputação na oftalmologia mineira, o <strong className="text-white font-medium">Dr. Pedro Henrique Ladeia Cruz</strong> une{' '}
-              tecnologia cirúrgica de última geração, rigor científico e cuidado altamente individualizado para promover a liberdade visual de seus pacientes.
+              <strong className="text-white font-medium">Dr. Pedro Ladeia</strong>, preceptor de catarata e córnea, com{' '}
+              <strong className="text-white font-medium">mais de 10 anos de experiência</strong>. Avaliação individual para saber se você pode operar.
             </p>
 
             {/* Specialty Badges */}
@@ -83,7 +82,7 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-navy-deep bg-brand-beige hover:bg-brand-beige-light shadow-xl transition-all duration-200 whitespace-nowrap group"
               >
                 <WhatsAppIcon className="w-4 h-4 text-brand-navy-deep shrink-0" />
-                <span className="whitespace-nowrap">Agendar Consulta</span>
+                <span className="whitespace-nowrap">Descubra se você pode operar</span>
                 <ArrowRight className="w-4 h-4 text-brand-navy-deep group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
 
@@ -91,7 +90,7 @@ export default function Hero() {
                 href="#protocolo"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-medium tracking-wide text-brand-offwhite/90 hover:text-white glass-panel-navy hover:bg-white/10 transition-colors whitespace-nowrap"
               >
-                <span>Conhecer Protocolo & Cirurgias</span>
+                <span>Como funciona o atendimento</span>
                 <span className="text-brand-beige">↓</span>
               </a>
             </div>
@@ -100,7 +99,7 @@ export default function Hero() {
             <div className="flex items-center gap-4 sm:gap-6 mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-white/10 text-[11px] sm:text-xs text-brand-offwhite/60">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-beige shrink-0" />
-                <span>Atendimento: <strong>Vila da Serra</strong> (Nova Lima) e <strong>PHD Olhos</strong> (Santa Luzia)</span>
+                <span>Atendimento em <strong>Vila da Serra</strong> e <strong>Belvedere</strong> · Nova Lima</span>
               </div>
             </div>
           </div>
@@ -115,7 +114,7 @@ export default function Hero() {
               <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-brand-navy-surface">
                 <Image
                   src="/dr_pedro_hero.jpg"
-                  alt="Dr. Pedro Henrique Ladeia Cruz - Oftalmologia de excelência, Córnea e Catarata"
+                  alt="Dr. Pedro Henrique Ladeia Cruz, oftalmologista especialista em Córnea e Catarata"
                   fill
                   priority
                   className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
@@ -127,8 +126,8 @@ export default function Hero() {
 
                 {/* Embedded Doctor Quote Card */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-brand-navy-deep/95 p-3.5 sm:p-4 rounded-xl border border-brand-beige/40 shadow-2xl backdrop-blur-md">
-                  <p className="font-sans font-semibold text-white text-xs sm:text-[13px] leading-snug tracking-wide mb-1.5 uppercase">
-                    “MINHA MISSÃO É PROPORCIONAR SUA TÃO SONHADA LIBERDADE VISUAL ATRAVÉS DE CIRURGIAS ULTRA PERSONALIZADAS”
+                  <p className="font-sans font-semibold text-white text-xs sm:text-[13px] leading-snug mb-1.5">
+                    “Minha missão é ajudar você a conquistar a liberdade de enxergar sem óculos, com uma cirurgia pensada para o seu olho e para a sua rotina.”
                   </p>
                   <p className="text-[11px] font-sans uppercase tracking-widest text-brand-beige font-bold">
                     — Dr. Pedro Ladeia
@@ -147,7 +146,7 @@ export default function Hero() {
                   + de 10 Anos de Experiência
                 </div>
                 <div className="text-[10px] text-brand-offwhite/70">
-                  Alta autoridade cirúrgica
+                  Preceptor de catarata e córnea
                 </div>
               </div>
             </div>

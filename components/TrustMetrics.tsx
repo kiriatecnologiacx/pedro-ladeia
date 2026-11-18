@@ -1,35 +1,35 @@
 import React from 'react';
-import { Award, ShieldCheck, Cpu, UserCheck } from 'lucide-react';
+import { Award, GraduationCap, MapPin, UserCheck } from 'lucide-react';
 
 export default function TrustMetrics() {
   const metrics = [
     {
       number: '+10',
       unit: 'Anos',
-      label: 'De Experiência Médica',
-      description: 'Trajetória sólida e respeito construído na oftalmologia mineira.',
+      label: 'De experiência médica',
+      description: 'Dedicados à oftalmologia, com foco em córnea e catarata.',
       icon: Award,
     },
     {
-      number: 'Milhares',
-      unit: 'de Vidas',
-      label: 'Transformadas com Clareza Visual',
-      description: 'Cirurgias de alta complexidade e tratamentos restauradores.',
+      number: 'Preceptor',
+      unit: 'de Catarata e Córnea',
+      label: 'Formando novos especialistas',
+      description: 'Além de operar, o Dr. Pedro ensina outros oftalmologistas.',
+      icon: GraduationCap,
+    },
+    {
+      number: 'Avaliação',
+      unit: 'Individual',
+      label: 'Cada olho é diferente',
+      description: 'A cirurgia só é indicada depois de avaliarmos o seu caso.',
       icon: UserCheck,
     },
     {
-      number: 'High-Tech',
-      unit: 'Padrão Internacional',
-      label: 'Tecnologia Diagnóstica de Ponta',
-      description: 'Mapeamento corneano e biometria óptica de máxima precisão.',
-      icon: Cpu,
-    },
-    {
-      number: '2 Polos',
-      unit: 'Estratégicos',
-      label: 'Nova Lima & Santa Luzia',
-      description: 'Atendimento Individualizado e de alto padrão e clínica consolidada.',
-      icon: ShieldCheck,
+      number: 'Nova Lima',
+      unit: 'MG',
+      label: 'Vila da Serra & Belvedere',
+      description: 'Atendimento em duas regiões de fácil acesso.',
+      icon: MapPin,
     },
   ];
 
@@ -47,7 +47,7 @@ export default function TrustMetrics() {
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-baseline gap-1.5">
+                  <div className="flex items-baseline gap-1.5 flex-wrap">
                     <span className="font-serif text-2xl sm:text-3xl font-bold text-brand-black tracking-tight">
                       {item.number}
                     </span>
@@ -55,7 +55,7 @@ export default function TrustMetrics() {
                       {item.unit}
                     </span>
                   </div>
-                  <div className="w-8 h-8 rounded-lg bg-brand-black/5 flex items-center justify-center text-brand-charcoal">
+                  <div className="w-8 h-8 rounded-lg bg-brand-black/5 flex items-center justify-center text-brand-charcoal shrink-0">
                     <Icon className="w-4 h-4" />
                   </div>
                 </div>

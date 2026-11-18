@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa } from '@/lib/site';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,13 +17,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappUrl =
-    'https://wa.me/5531998972000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Pedro%20Ladeia.';
+  const whatsappUrl = wa('Olá, gostaria de agendar uma consulta com o Dr. Pedro Ladeia.');
 
   const navLinks = [
     { name: 'Protocolo', href: '#protocolo' },
     { name: 'Sobre o Médico', href: '#sobre' },
-    { name: 'Cirurgias Premium', href: '#cirurgias' },
+    { name: 'Cirurgias', href: '#cirurgias' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Unidades', href: '#unidades' },
   ];
@@ -45,7 +45,7 @@ export default function Navbar() {
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
           </div>
           <span className="text-[9px] sm:text-[10px] md:text-[11px] font-sans tracking-[0.2em] text-brand-beige uppercase font-medium">
-            Oftalmologia de excelência · Córnea & Catarata
+            Oftalmologista · Córnea & Catarata
           </span>
         </a>
 

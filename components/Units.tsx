@@ -1,42 +1,37 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Phone, Clock, ArrowUpRight, ShieldCheck, Building2 } from 'lucide-react';
+import { MapPin, Phone, ArrowUpRight, ShieldCheck, Building2 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+import { wa, PHONE_DISPLAY } from '@/lib/site';
 
 export default function Units() {
   const units = [
     {
-      name: 'Unidade Nova Lima',
-      badge: 'Atendimento Individualizado e de Alto Padrão',
-      region: 'Vila da Serra / Alameda da Serra',
-      address: 'Polo Médico e Empresarial de Nova Lima — MG',
-      phone: '(31) 99897-2000',
-      hours: 'Segunda a Sexta · Horários Agendados',
+      name: 'Vila da Serra',
+      badge: 'Nova Lima — MG',
+      region: 'Atendimento com hora marcada',
       description:
-        'Consultório privativo desenhado para oferecer Atendimento Individualizado e de alto padrão, discrição e pontualidade no coração do Vila da Serra.',
+        'Consultório para avaliações oftalmológicas, exames e planejamento de cirurgia de catarata, córnea e laser, com atendimento individual.',
       highlights: [
-        'Avaliação pré-operatória de alta complexidade',
-        'Catarata com Lentes Premium e Refrativa a Laser',
-        'Estacionamento e acesso privativo',
+        'Avaliação para saber se você pode operar',
+        'Catarata com lentes premium e cirurgia a laser para o grau',
+        'Tratamento do ceratocone',
       ],
-      whatsappMsg: 'Ol%C3%A1%2C%20gostaria%20de%20agendar%20consulta%20na%20unidade%20Nova%20Lima.',
+      whatsappMsg: 'Olá, gostaria de agendar uma consulta em Vila da Serra.',
     },
     {
-      name: 'Unidade Santa Luzia (PHD Olhos)',
-      badge: 'Clínica Consolidada · + de 10 Anos de Experiência',
-      region: 'Centro Histórico & Comercial',
-      address: 'Rua Santa Luzia, 292 — Centro, Santa Luzia — MG',
-      phone: '(31) 99897-2000',
-      hours: 'Segunda a Sexta: 08h às 18h',
+      name: 'Belvedere',
+      badge: 'Nova Lima — MG',
+      region: 'Atendimento com hora marcada',
       description:
-        'A estrutura que consagrou a atuação cirúrgica do Dr. Pedro Ladeia na região metropolitana, com equipe completa e parque diagnóstico.',
+        'Mais uma opção de local para você ser avaliado(a) pelo Dr. Pedro, com a mesma conversa individual e o mesmo cuidado em cada consulta.',
       highlights: [
-        'Centro de diagnóstico em Córnea e Ceratocone',
-        'Equipe multidisciplinar e exames complementares',
-        'Referência consolidada na saúde visual de Santa Luzia',
+        'Consulta com tempo para tirar todas as dúvidas',
+        'Exames e orientação sobre o melhor tratamento',
+        'Acompanhamento antes e depois da cirurgia',
       ],
-      whatsappMsg: 'Ol%C3%A1%2C%20gostaria%20de%20agendar%20consulta%20na%20unidade%20Santa%20Luzia.',
+      whatsappMsg: 'Olá, gostaria de agendar uma consulta no Belvedere.',
     },
   ];
 
@@ -47,21 +42,21 @@ export default function Units() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 sm:mb-16 gap-5">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-beige-dark uppercase mb-3">
-              <span>✦ UNIDADES DE ATENDIMENTO</span>
+              <span>✦ ONDE ATENDEMOS</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-black font-normal leading-tight">
-              Duas localizações estratégicas para o seu conforto.
+              Atendimento em Vila da Serra e Belvedere.
             </h2>
           </div>
           <p className="font-sans text-xs sm:text-sm text-brand-charcoal/80 max-w-md font-light leading-relaxed">
-            Escolha o polo de atendimento ideal para você com a mesma dedicação técnica e acolhimento do Dr. Pedro Ladeia.
+            Escolha o local mais conveniente para você. A conversa e o cuidado são os mesmos nos dois.
           </p>
         </div>
 
         {/* Units Cards Grid */}
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
           {units.map((unit, index) => {
-            const bookingUrl = `https://wa.me/5531998972000?text=${unit.whatsappMsg}`;
+            const bookingUrl = wa(unit.whatsappMsg);
 
             return (
               <div
@@ -93,15 +88,11 @@ export default function Units() {
                   <div className="space-y-2.5 py-4 border-y border-brand-beige/50 text-xs text-brand-charcoal mb-6">
                     <div className="flex items-start gap-2.5">
                       <MapPin className="w-4 h-4 text-brand-beige-dark shrink-0 mt-0.5" />
-                      <span>{unit.address}</span>
+                      <span>{unit.name}, Nova Lima — MG · endereço enviado ao agendar</span>
                     </div>
                     <div className="flex items-center gap-2.5">
                       <Phone className="w-4 h-4 text-brand-beige-dark shrink-0" />
-                      <span>{unit.phone} · WhatsApp & Ligações</span>
-                    </div>
-                    <div className="flex items-center gap-2.5">
-                      <Clock className="w-4 h-4 text-brand-beige-dark shrink-0" />
-                      <span>{unit.hours}</span>
+                      <span>{PHONE_DISPLAY} · WhatsApp</span>
                     </div>
                   </div>
 
@@ -125,7 +116,7 @@ export default function Units() {
                 >
                   <span className="inline-flex items-center gap-2 whitespace-nowrap truncate">
                     <WhatsAppIcon className="w-3.5 h-3.5 text-brand-beige shrink-0" />
-                    <span className="whitespace-nowrap truncate">Agendar Consulta nesta Unidade</span>
+                    <span className="whitespace-nowrap truncate">Agendar neste local</span>
                   </span>
                   <ArrowUpRight className="w-4 h-4 text-brand-beige group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform shrink-0 ml-2" />
                 </a>

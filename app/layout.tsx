@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Dr. Pedro Ladeia — Oftalmologia de excelência | Córnea & Catarata',
+  title: 'Dr. Pedro Ladeia — Oftalmologista | Córnea & Catarata em Nova Lima',
   description:
-    '+ de 10 anos de experiência médica e autoridade cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
+    'Cirurgia para enxergar sem óculos, planejada para a sua rotina. Dr. Pedro Ladeia, oftalmologista especialista em Córnea e Catarata, com atendimento em Vila da Serra e Belvedere, Nova Lima.',
   keywords: [
     'Dr. Pedro Ladeia',
     'Oftalmologista Nova Lima',
-    'Oftalmologista Santa Luzia',
-    'Cirurgia de Catarata MG',
+    'Cirurgia de Catarata Nova Lima',
+    'Oftalmologista Vila da Serra',
+    'Oftalmologista Belvedere',
     'Lentes Premium',
     'Ceratocone Especialista',
     'Cirurgia Refrativa Laser',
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Dr. Pedro Henrique Ladeia Cruz' }],
   openGraph: {
-    title: 'Dr. Pedro Ladeia — Oftalmologia de excelência',
+    title: 'Dr. Pedro Ladeia — Oftalmologista | Córnea & Catarata',
     description:
-      '+ de 10 anos de experiência cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
+      'Cirurgia para enxergar sem óculos, planejada para a sua rotina. Atendimento em Vila da Serra e Belvedere, Nova Lima.',
     url: 'https://pedroladeia.com.br',
     siteName: 'Dr. Pedro Ladeia Oftalmologia',
     locale: 'pt_BR',
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Pedro Ladeia — Oftalmologia de excelência',
+    title: 'Dr. Pedro Ladeia — Oftalmologista | Córnea & Catarata',
     description:
-      '+ de 10 anos de experiência cirúrgica em Córnea, Catarata e Ceratocone. Atendimento Individualizado e de alto padrão em Nova Lima e Santa Luzia.',
+      'Cirurgia para enxergar sem óculos, planejada para a sua rotina. Atendimento em Vila da Serra e Belvedere, Nova Lima.',
   },
 };
 
