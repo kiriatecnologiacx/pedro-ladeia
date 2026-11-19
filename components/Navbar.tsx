@@ -39,10 +39,10 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a href="#" className="flex flex-col group shrink-0">
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="font-serif text-base sm:text-xl lg:text-2xl font-bold tracking-tight text-white group-hover:text-brand-beige transition-colors">
+            <span className="font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-white group-hover:text-brand-beige transition-colors">
               DR. PEDRO LADEIA
             </span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-beige"></span>
+            <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-beige"></span>
           </div>
           <span className="text-[9px] sm:text-[10px] md:text-[11px] font-sans tracking-[0.2em] text-brand-beige uppercase font-medium">
             Oftalmologista · Córnea & Catarata

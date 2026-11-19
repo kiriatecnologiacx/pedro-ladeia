@@ -38,10 +38,14 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Editorial Value Proposition */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            {/* Top Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full glass-panel-navy border border-brand-beige/25 text-brand-beige text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-5 sm:mb-6 shadow-sm">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-beige animate-pulse"></span>
-              <span>OFTALMOLOGIA · VILA DA SERRA & BELVEDERE</span>
+            {/* Doctor name signature */}
+            <div className="mb-6 sm:mb-8 pl-4 border-l-2 border-brand-beige">
+              <p className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-beige tracking-tight leading-tight">
+                Dr. Pedro Ladeia
+              </p>
+              <p className="mt-1.5 text-[10px] sm:text-xs font-sans font-medium uppercase tracking-[0.18em] text-brand-offwhite/70">
+                Oftalmologista · Córnea &amp; Catarata · CRM-MG 48344 · RQE 40934
+              </p>
             </div>
 
             {/* Main Headline */}
@@ -126,11 +130,14 @@ export default function Hero() {
 
                 {/* Embedded Doctor Quote Card */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-brand-navy-deep/95 p-3.5 sm:p-4 rounded-xl border border-brand-beige/40 shadow-2xl backdrop-blur-md">
-                  <p className="font-sans font-semibold text-white text-xs sm:text-[13px] leading-snug mb-1.5">
-                    “Minha missão é ajudar você a conquistar a liberdade de enxergar sem óculos, com uma cirurgia pensada para o seu olho e para a sua rotina.”
+                  <p className="font-serif text-lg sm:text-xl font-semibold text-brand-beige leading-tight">
+                    Dr. Pedro Ladeia
                   </p>
-                  <p className="text-[11px] font-sans uppercase tracking-widest text-brand-beige font-bold">
-                    — Dr. Pedro Ladeia
+                  <p className="text-[10px] font-sans uppercase tracking-widest text-brand-offwhite/70 mb-2">
+                    Córnea &amp; Catarata
+                  </p>
+                  <p className="font-sans text-white/90 text-xs sm:text-[13px] leading-snug">
+                    “Minha missão é ajudar você a conquistar a liberdade de enxergar sem óculos, com uma cirurgia pensada para o seu olho e para a sua rotina.”
                   </p>
                 </div>
               </div>
