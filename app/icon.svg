@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0B1B33"/>
+  <rect x="22" y="22" width="468" height="468" rx="92" fill="none" stroke="#D8CBB7" stroke-opacity="0.45" stroke-width="6"/>
+  <text x="224" y="338" text-anchor="middle" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="236" font-weight="700" fill="#D8CBB7" letter-spacing="-6">PL</text>
+  <circle cx="430" cy="322" r="15" fill="#D8CBB7"/>
+</svg>
